@@ -1,0 +1,115 @@
+# Project information
+site_name: "ML REPA Library: MLOps and ML Engineering Solutions for Success"
+site_url: https://mlrepa.github.io/mlrepa-library/
+site_author: Mikhail Rozhkov
+site_description: >-
+  This library is dedicated to providing the most up-to-date and relevant information, tutorials, and solutions to help you succeed in your machine learning projects.
+
+# Repository
+repo_name: ML REPA Library
+repo_url: https://github.com/mlrepa/mlrepa-library
+
+# Copyright
+copyright: Copyright &copy; 2023 Machine Learning REPA
+
+theme: 
+  name: material
+  features:
+    - content.tabs.link
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-6
+        name: Switch to dark mode
+      primary: deep purple
+      accent: cyan
+    - scheme: slate 
+      toggle:
+        icon: material/brightness-6
+        name: Switch to light mode    
+      primary: deep purple
+      accent: teal
+  logo: assets/logo.png
+  favicon: assets/images/favicon.png
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true 
+  
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - social
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/mlrepa 
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/mlrepa  
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/groups/9320089/
+
+# Page tree
+nav:
+  - Home: 
+    - index.md
+    # - Community: ''
+    - Contributors Guide: community/contribution-guide.md
+    - Author Guide: community/author-guide.md
+
+  - Tutorials: # tool features
+    - Get Started: 
+      - project/index.md
+      - Command Line Interface (CLI): project/1-cli-get-started.md
+    #   - Git: ''
+    #   - CI/CD for Machine Learning: ''
+    # - DVC: 
+    #   - DVC: ''
+
+  # - Solutions: # industrial cases 
+  #   - Batch scoring: ''
+  #   - Computer Vision: ''
+  #   - NLP: ''
+  #   - LLM: ''
