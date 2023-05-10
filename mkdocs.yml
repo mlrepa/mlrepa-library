@@ -103,6 +103,10 @@ nav:
     - Get Started: 
       - project/index.md
       - Command Line Interface (CLI): project/1-cli-get-started.md
+      - Introduction to Git and version control: project/1-git-get-started.md
+      - Basic Git commands: project/2-git-basics.md
+      - GitLab workflow - Git Remote: project/3-git-remote.md
+      - GitLab workflow - Git Fork: project/4-git-fork.md
     #   - Git: ''
     #   - CI/CD for Machine Learning: ''
     # - DVC: 

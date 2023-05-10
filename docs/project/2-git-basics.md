@@ -60,7 +60,7 @@ git commit -m "My first Git commit"
 
 ```bash
 # View git history with `git log` 
-...
+git log
 ```
 
 ## **2.  Branching and merging**

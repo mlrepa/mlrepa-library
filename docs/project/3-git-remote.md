@@ -8,13 +8,11 @@ In this module, you will learn how to work with a remote repository using GitLab
 
 You will clone a remote repository, update your local repository and push changes to the remote.
 
-Additionally, you will learn how to create a Merge Request to propose changes to the original repository.
 
 ## 🎯 Tasks and Goals
 - Clone an existing repository from GitLab.
 - Update the local repository with changes made on GitLab.
 - Push changes from the local repository to GitLab.
-- Create a Merge Request to propose changes to the original repository.
 
 ## ⚒️ Tutorial: Work with the remote repository (GitLab)
 
@@ -75,19 +73,13 @@ git add config.yaml && git commit -m "Add config.yaml"
 git push origin dev
 ``` 
 
-## **3. Create a Merge Request**
-
-1. Create a Merge Request (via GitLab UI) to the main branch
-2. Wait...
-3. Check the test assignment report
-
 ## 🏁 Conclusion
 
 Congratulations on completing this tutorial! 🥳
 
 You have learned how to work with a remote repository using GitLab. You cloned a remote repository, updated your local repository, and pushed changes to the remote.
 
-Furthermore, you learned how to create a Merge Request to propose changes to the original repository.
+See you in the next tutorial!
 
 ## 🎓 Additional Resources and Links for Self-learning:
 
