@@ -1,4 +1,4 @@
-![Untitled](static/banner.png)
+![Untitled](images/banner.png)
 <!-- 1-cli-get-started -->
 
 # Command Line Interface (CLI): Get Started
@@ -122,36 +122,31 @@ These code lines demonstrate how to copy, move, and delete files and directories
 # Navigate to the `demo-cli` dir
 cd demo-cli
 ```
-
 2. Create a copy of the **`file.txt`** using **`cp file.txt file2.txt`**.
 
 ``` bash
 # Create a copy of the `file.txt` 
 cp file.txt file2.txt
 ```
-
 3. Move the copy to the parent directory (use **`..`**) with **`mv file2.txt ..`**.
 
 ```bash
 # Move the copy to the parent directory (us `..`)
 mv file2.txt ..
 ```
-
 4. Navigate to the parent directory with **`cd ..`** command.
 
 ```bash
 # Navigate to the parent dir
 cd .. 
 ```
-
-1. Remove **`file2.txt`** using the command **`rm`** and the file’s name such as **`file2.txt`**
+5. Remove **`file2.txt`** using the command **`rm`** and the file’s name such as **`file2.txt`**
 
 ```bash
 # Remove `file2.txt` 
 rm file2.txt
 ```
-
-5. Remove the **`demo-cli`** directory and all its contents using **`rm -rf demo-cli`**.
+6. Remove the **`demo-cli`** directory and all its contents using **`rm -rf demo-cli`**.
 
 ```bash
 # Remove `demo-cli` dir
@@ -182,4 +177,4 @@ Keep practicing and honing your skills with the CLI, and don't hesitate to explo
 
     Thank you for taking the time to share your thoughts with us! 👍
 
-![Untitled](static/footer.png)
+![Untitled](images/footer.png)
