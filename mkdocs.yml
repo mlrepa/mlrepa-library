@@ -107,9 +107,15 @@ nav:
       - Basic Git commands: project/2-git-basics.md
       - Git workflow - Remote: project/3-git-remote.md
       - Git workflow - Fork: project/4-git-fork.md
+   
+    - DVC:
+      - Get Started with DVC: dvc/dvc-1-get-started.md
+      - Data Versioning with DVC: dvc/dvc-2-data-versioning.md
+      - Automate ML experiments with DVC: dvc/dvc-3-automate-experiments.md
+
     #   - Git: ''
     #   - CI/CD for Machine Learning: ''
-    # - DVC: 
+    
     #   - DVC: ''
 
   # - Solutions: # industrial cases 
