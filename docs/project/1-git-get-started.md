@@ -35,7 +35,7 @@ So, with a version control system you can
 
 <br>
 
-#### **Why is Git important for machine learning development?**
+**Why is Git important for machine learning development?**
 
 Git as version control system is crucial in ML development, because it
 

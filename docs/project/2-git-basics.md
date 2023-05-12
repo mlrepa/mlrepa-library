@@ -22,7 +22,7 @@ By the end of this tutorial, you will be able to:
 
 ## **⚒️ Tutorial: Basic Git commands**
 
-## **1. Git - Basics**
+### **1. Git - Basics**
 
 This example demonstrates the basics of using Git to create a repository and make changes to the code.
 
@@ -63,7 +63,7 @@ The file is added to the staging area with `git add`, and a commit message is ad
     git log
     ```
 
-## **2.  Branching and merging**
+### **2.  Branching and merging**
 
 Follow step by step tutorial to practice branching and merging
 
