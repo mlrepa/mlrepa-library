@@ -1,5 +1,4 @@
-![Untitled](images/banner.png)
-<!-- 1-cli-get-started -->
+![Untitled](images/1-cli-get-started.png)
 
 # Command Line Interface (CLI): Get Started
 
@@ -9,7 +8,7 @@ This module will introduce you to how to use CLI to manage files and directories
 
 We will cover the basic commands for navigating your file system, creating, editing, copying, renaming, moving, and deleting files and directories using the CLI.
 
-## 🎯 **Tasks and Goals**
+## 🎯 **Goals**
 
 By the end of this module, you should be able to:
 
@@ -21,7 +20,7 @@ By the end of this module, you should be able to:
 
 ### **1. Show files and directories**
 
-Let's show the current working directory with **`pwd`** command, 
+Let's show the current working directory with `pwd` command, 
 
 ``` bash
 # Show the current working directory 
@@ -33,35 +32,35 @@ pwd
 ls
 ```
 
-To show the hidden files (files whose names begin with a dot **`.`**), use the option **`-a`** with the **`ls`** command. 
+To show the hidden files (files whose names begin with a dot `.`), use the option `-a` with the `ls` command. 
 
 ```bash
 # Show `hidden` files (whose names begin with a dot ‘.’)
 ls -a 
 ```
 
-To get help on **`ls`** command, let's use the command **`man ls`**. Same works for other CLI commands. 
+To get help on `ls` command, let's use the command `man ls`. Same works for other CLI commands. 
 
 ``` bash
 # Show the command `Help`  (quit with `q` + Enter)
 man ls
 ```
 
-To list files in the long format, use the option **`-l`**with the **`ls`** command. 
+To list files in the long format, use the option `-l` with the `ls` command. 
 
 ```bash
 # List files in the long format
 ls -l 
 ```
 
-To combine options, use **`-la`**. 
+To combine options, use `-la`. 
 
 ```bash
 # Combine options: list all files in the long format 
 ls -la 
 ```
 
-Finally, to show the content of a file, use the **`cat`** command followed by the filename, such as **`.hidden-file`**.
+Finally, to show the content of a file, use the `cat` command followed by the filename, such as `.hidden-file`.
 
 ```bash
 # Show the content of the file
@@ -70,21 +69,21 @@ cat .hidden-file
 
 ### **2. Create files and directories**
 
-To create a new **`demo-cli`** directory, you should use the **`mkdir`** command followed by the directory name. 
+To create a new `demo-cli` directory, you should use the `mkdir` command followed by the directory name. 
 
 ```bash
 # Create a new `demo-cli` directory 
 mkdir demo-cli
 ```
 
-Once the directory is created, you can navigate it using the **`cd`** command. 
+Once the directory is created, you can navigate it using the `cd` command. 
 
 ```bash
 # Navigate to the `demo-cli` dir
 cd demo-cli
 ```
 
-After navigating to the **`demo-cli`** directory, you can create a new file named **`file.txt`** using the **`vi`** editor. 
+After navigating to the `demo-cli` directory, you can create a new file named `file.txt` using the `vi` editor. 
 
 ```bash
 # Create a file with `vi/vim` or `touch` 
@@ -116,37 +115,37 @@ vi file2.txt
 
 These code lines demonstrate how to copy, move, and delete files and directories using the command-line interface. Here are the steps:
 
-1. Navigate to the **`demo-cli`** directory using **`cd demo-cli`**.
+1. Navigate to the `demo-cli` directory using `cd demo-cli`.
 
 ``` bash
 # Navigate to the `demo-cli` dir
 cd demo-cli
 ```
-2. Create a copy of the **`file.txt`** using **`cp file.txt file2.txt`**.
+2. Create a copy of the `file.txt` using `cp file.txt file2.txt`.
 
 ``` bash
 # Create a copy of the `file.txt` 
 cp file.txt file2.txt
 ```
-3. Move the copy to the parent directory (use **`..`**) with **`mv file2.txt ..`**.
+3. Move the copy to the parent directory (use **`..`**) with `mv file2.txt ..`
 
 ```bash
 # Move the copy to the parent directory (us `..`)
 mv file2.txt ..
 ```
-4. Navigate to the parent directory with **`cd ..`** command.
+4. Navigate to the parent directory with `cd ..` command.
 
 ```bash
 # Navigate to the parent dir
 cd .. 
 ```
-5. Remove **`file2.txt`** using the command **`rm`** and the file’s name such as **`file2.txt`**
+5. Remove `file2.txt` using the command `rm` and the file’s name such as `file2.txt`
 
 ```bash
 # Remove `file2.txt` 
 rm file2.txt
 ```
-6. Remove the **`demo-cli`** directory and all its contents using **`rm -rf demo-cli`**.
+6. Remove the `demo-cli` directory and all its contents using `rm -rf demo-cli`.
 
 ```bash
 # Remove `demo-cli` dir
@@ -162,19 +161,21 @@ Keep practicing and honing your skills with the CLI, and don't hesitate to explo
 
 ## 🎓 **Additional Resources**
 
-- [TODO: add the link] Machine Learning REPA School: extended materials with practice, assessment, and feedback 
 - [Unix Tutorial for Beginners](https://www.ee.surrey.ac.uk/Teaching/Unix/)
 - [Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial)
 - [Introduction to the Unix Shell](https://swcarpentry.github.io/shell-novice/)
 
-!!! info " Share Your Feedback! 🙏🏻 "
+!!! info " Contribute to the community! 🙏🏻 "
 
-    Hey! We hope you enjoyed the tutorial and learned a lot of useful techniques. We would like to hear from you about your experience with this tutorial. Your feedback is important and helps us improve and create better learning experiences for the whole community. 
+    Hey! We hope you enjoyed the tutorial and learned a lot of useful techniques 🔥 
+    
+    Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
 
-    Please take a moment to fill out our feedback form and let us know what you think about the module. We would appreciate any suggestions or comments you may have on how we can improve our tutorials.
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub 
+    - 📣 **Share our tutorials** with others, and
+    - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
+    We would appreciate any suggestions or comments you may have
 
-    Link to feedback form: **[Feedback Form](insert link here)**
-
-    Thank you for taking the time to share your thoughts with us! 👍
+    Thank you for taking the time to help the community! 👍
 
 ![Untitled](images/footer.png)

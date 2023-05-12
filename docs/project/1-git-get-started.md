@@ -1,5 +1,5 @@
-![Untitled](images/banner.png)
-# Introduction to Git and version control
+![Untitled](images/1-git-get-started.png)
+# Get started with Git 
 
 ## 👀 **Оverview**
 
@@ -10,56 +10,55 @@ We will cover the basics of Git, such as creating a repository, making commits, 
 ## 🎯 **Goals**
 
 By the end of this tutorial you will: 
+
 - understand what Git is and why it's important for ML development
 - learn the basic concepts of version control, including repositories, commits, branches, and merges
 
-## **1. What is Git and why is it important for ML development?**
+## **Tutorial: Introduction to Git and version control**
+
+### **1. What is Git and why is it important for ML development?**
 
 [Git](https://git-scm.com/) is the most popular **version control system** in the world. And version control system records the changes made to our code over time in a special database. 
 
 We can look at our project history and see who has made changes, what changes, when and why. And if we screw something up we can easily revert our project back to an earlier state.
 
-<br>
-
-<!-- <p style="text-align: center;">Git explained in 100 seconds</p> -->
-
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/hwP7WQkmECE" frameborder="0" width="600" height="300" allowfullscreen="true" "Image Title" > </iframe>
-  <figcaption>
-    Git explained in 100 seconds
-    </figcaption>
-</figure> 
-
-
 Without a version control system we'll have to constantly store copies of the entire project in various folders. This is very slow and doesn't scale at all. Especially if multiple people have to work on the same project you would have to constantly toss around the latest code via email or some other mechanisms and then manually merge the changes.
 
 So, with a version control system you can
 
-- keep track of your code and files changes over time. So you have a record of what has been done, who made changes, and revert to specific versions
-- collaborate easier, because Git allow merge changes of multiple people into one source
-- experiment with different features and models without losing progress
-- handle different versions of the same code at the same time
-- take different versions of the same code, compare them, and assemble them together
-- create your own copy of a collection of files to modify your copy and suggest changes
+- Keep track of your code and files changes over time. So you have a record of what has been done, who made changes, and revert to specific versions
+- Collaborate easier, because Git allow merge changes of multiple people into one source
+- Experiment with different features and models without losing progress
+- Handle different versions of the same code at the same time
+- Take different versions of the same code, compare them, and assemble them together
+- Create your own copy of a collection of files to modify your copy and suggest changes
 
+<br>
 
-### **Why is Git important for machine learning development?**
+#### **Why is Git important for machine learning development?**
 
 Git as version control system is crucial in ML development, because it
 
-- helps avoid pitfalls of manual version control such as overwriting important files or forgetting to make backups
-- allows you to create and switch between branches, commit changes to that branches, merge changes from different sources, and track project evolution over time
-- keeps code organized and easy to manage
-- enables collaboration with other developers simultaneously without risking loss of progress
-- facilitates collaboration between teams and remote workers by providing a repository to share code and track changes.
-- enables rollbacks to previous versions of code, providing a safety net for testing new features or implementing changes.
-- helps to resolve conflicts that may arise when multiple developers make changes to the same codebase.
-- allows for easy monitoring of project history, including who made what changes and when, providing valuable insights into the development process.
-- integrates with a wide range of other development tools and platforms, making it a flexible and versatile option for ML development teams.
+- Helps avoid pitfalls of manual version control for files, notebooks and models
+- Keeps code organized and easy to manage
+- Enables collaboration with other developers simultaneously without risking loss of progress
+- Allows for easy monitoring of project history, including who made what changes and when, providing valuable insights into the development process.
 
-## **2. Basic concepts of version control: repository, commit, branch, merge, etc.** 
+### **2. Basic concepts of version control: repository, commit, branch, merge, etc.** 
 
-To manage changes to code over time you should learn the basic concepts of version control. Here they are:
+To manage changes to code over time you should learn the basic concepts of version control. 
+Watch the video to get an understanding of how Git works:
+
+<br>
+
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/hwP7WQkmECE" frameborder="0" width="600" height="300" allowfullscreen="true" "Image Title" > </iframe>
+  <figcaption>
+     Git explained in 100 seconds
+    </figcaption>
+</figure>
+
+Let’s summarise:
 
 - **Repository:** A repository is a collection of files and folders that are managed by a version control system. It contains the entire history of the project, including all changes and versions of the code.
   
@@ -82,43 +81,13 @@ To manage changes to code over time you should learn the basic concepts of versi
 
 These concepts are fundamental to version control systems like Git, and understanding them is essential for effective collaboration and development in software development teams.  
 
-## **3. Git installation and configuring**
+### **3. Git installation**
 
 The first step in using Git is to install it on your machine and configure it. Here are the steps to follow:
 
 1. Go to the official [Git website](https://git-scm.com/downloads) and download the appropriate version for your operating system.
-2. Follow the installation instructions provided in the setup wizard.
-3. Once installed, open a terminal or command prompt window and verify that Git was installed correctly by typing
-   
-```bash
-git --version
-# git version 2.40.1
-```
-4. After installing Git, you should configure your Git settings for your machine. This includes: 
-- setting your name and email address, 
-- default text editor, and 
-- merge tool using the appropriate Git commands.
+2. Follow the installation instructions provided on the Git website, or follow the videos below with the whole process of installation and configuration (for MacOS and Windows)
 
-  Here are the steps to follow:
-
-  4.1. Open a terminal or command prompt window and type the following commands to set your name and email address:
-  ```bash
-  git config --global user.name "Your Name"
-  git config --global user.email "youremail@example.com"
-  ```
-
-  4.2. Next, set your default text editor and merge tool using the following commands:
-
-  ```bash
-  git config --global core.editor "code --wait"
-  git config --global merge.tool "code --wait"
-  ```
-  4.3. Verify that your Git settings are correct by typing the following command:
-  ```bash
-  git config --list
-  ```
-
-Watch video tutorials below with the whole process of installation and configuration (for MacOS and Windows)
 
 <figure class="video_container">
   <iframe src="https://www.youtube.com/embed/r3SgprWigBc" frameborder="0" width="600" height="300" allowfullscreen="true" "Image Title" > </iframe>
@@ -134,29 +103,60 @@ Watch video tutorials below with the whole process of installation and configura
     </figcaption>
 </figure>
 
-5. Final step here is to create and add your SSH key
-   
-   Adding an SSH key to your Git configuration allows you to securely authenticate and interact with remote repositories without having to repeatedly enter your username and password.
+### **4. Git configuration**
 
-   5.1. To create an SHH key you need to open a terminal or command prompt window and type the following command to generate an SSH key:
+After installing Git, you should configure your Git settings for your machine. This includes setting your name and email address, default text editor, and merge tool using the appropriate Git commands. 
+
+Here are the steps to follow:
+
+1. Open a terminal or command prompt window and type the following commands to set your name and email address:
+
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "youremail@example.com"
+  ```
+2. Next, set your default text editor and merge tool using the following commands:
+
+  ```bash
+  git config --global core.editor "code --wait"
+  git config --global merge.tool "code --wait"
+  ```
+3. Verify that your Git settings are correct by typing the following command:
+
+  ```bash
+  git config --list
+  ```
+
+### **5. Setup SSH**
+An SSH key is an access credential for the SSH (secure shell) network protocol. Using the SSH key to your Git configuration allows you to securely authenticate and interact with remote repositories (on GitHub or GitLab) without having to repeatedly enter your username and password.
+ 
+- [What is a Git SSH Key?](https://www.atlassian.com/git/tutorials/git-ssh) 
+
+**Generate an SSH key and add it to your Git account**
+
+To communicate securely with remote repositories, you need to generate an SSH key and add it to your Git account. 
+
+Here are the steps to follow:
+
+1. Open a terminal or command prompt window and type the following command to generate an SSH key:
    ```bash
    ssh-keygen
    ```
-   5.2. Follow the instructions provided in the setup wizard to generate your SSH key.
+2. Follow the instructions provided in the setup wizard to generate your SSH key.
+3. Once generated, add your public SSH key to your Git account by copying the public key from the terminal or command prompt and pasting it into the appropriate field in your Git account settings.
 
-   5.3. Once generated, add your public SSH key to your Git account by copying the key from the terminal or command prompt and pasting it into the appropriate field in your Git account settings.
-   
-Also you can follow the video tutorial below: 
+    a. [Add an SSH key to your GitLab account](https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account)
 
-<br>
+    b. [Add an SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+Also you can look at more detailes in the  documentation to [generate an SSH key pair](https://docs.gitlab.com/ee/user/ssh.html#generate-an-ssh-key-pair) or watch a video below.
 
 <figure class="video_container">
   <iframe src="https://www.youtube.com/embed/Z3ELWci34cM" frameborder="0" width="600" height="300" allowfullscreen="true" "Image Title" > </iframe>
   <figcaption>
-     Crerating and adding SSH key
+    Creating and adding your SSH Key (Windows, Mac and Linux)
     </figcaption>
 </figure> 
-
 
 ## 🏁 **Conclusion**
 
@@ -166,24 +166,25 @@ By now, you should have a solid understanding of what Git is and why it is impor
 
 See you on the next step! 
 
-## 🎓 **Additional resources and links for self-learning**
+## 🎓 **Additional resources**
 
 - **[Git documentation](https://git-scm.com/doc)**
 - **[GitHub Guides](https://docs.github.com/en)**
 - **[Atlassian Git tutorial](https://www.atlassian.com/git/tutorials)**
 - **[Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)**
-- Pro Git book: **[https://git-scm.com/book/en/v2](https://git-scm.com/book/en/v2)**
+- **[Use SSH keys to communicate with GitLab](https://docs.gitlab.com/ee/user/ssh.html)**
 
-## 🚀 **Your Feedback is Important to the Community!**
+!!! info " Contribute to the community! 🙏🏻 "
 
-Hey! We hope you enjoyed the tutorial and learned a lot of useful techniques 🔥
+    Hey! We hope you enjoyed the tutorial and learned a lot of useful techniques 🔥 
+    
+    Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
 
-Please 🙏🏻  take a moment to fill out feedback form. We would appreciate any suggestions or comments you may have on how we can improve our tutorials and create better learning experiences for the whole community. 
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub 
+    - 📣 **Share our tutorials** with others, and
+    - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
+    We would appreciate any suggestions or comments you may have
 
-<!-- Link to feedback form: **[Feedback Form](insert link here)** -->
-
-[Feedback Form :fontawesome-solid-paper-plane:](https://forms.gle/Yc9DmampbwFpEzo58){ primary: #7f56c0 accent: #7f56c0; .md-button }
-
-Thank you for taking the time to share your thoughts with us! 👍
+    Thank you for taking the time to help the community! 👍
 
 ![Untitled](images/footer.png)
