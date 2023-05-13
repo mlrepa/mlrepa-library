@@ -93,7 +93,7 @@ extra:
 
 # Page tree
 nav:
-  - Home: 
+  - ML REPA: 
     - index.md
     # - Community: ''
     - Contributors Guide: community/contribution-guide.md
@@ -123,8 +123,8 @@ nav:
     # - Pipelines: '' 
     # - Automation: '' 
       
-  - Production ML and MLOps: # Production techniques and patterns 
-    - mlops/index.md
+  # - Production ML and MLOps: # Production techniques and patterns 
+  #   - mlops/index.md
   #   - Overview: 
         # - 'mlops/mlops-0-overview.md'
         # - Overview: 'mlops/mlops-1-system-architecture.md'
