@@ -113,13 +113,28 @@ nav:
       - Data Versioning with DVC: dvc/dvc-2-data-versioning.md
       - Automate ML experiments with DVC: dvc/dvc-3-automate-experiments.md
 
-    #   - Git: ''
-    #   - CI/CD for Machine Learning: ''
-    
-    #   - DVC: ''
+  # - REPA: # Review REPA principles 
+    # - Reliable & Reproducible ML:
+      # - Reproducible ML: '' 
+      # - Data Versioninig: '' 
+      # - Testing and Monitoring: '' 
+    # - Experiments Management:
+      # - Metrics tracking: ''
+    # - Pipelines: '' 
+    # - Automation: '' 
+      
+  - Production ML and MLOps: # Production techniques and patterns 
+    - mlops/index.md
+  #   - Overview: 
+        # - 'mlops/mlops-0-overview.md'
+        # - Overview: 'mlops/mlops-1-system-architecture.md'
+    # - Metrics tracking and Experiment: ''
+    # - CI/CD for Machine Learning: ''
+    # - Monitoring and Observability: ''
 
-  # - Solutions: # industrial cases 
+  # - Solutions: # industrial use cases and integrations 
   #   - Batch scoring: ''
   #   - Computer Vision: ''
   #   - NLP: ''
   #   - LLM: ''
+  #   - Instruct Models: GPT...

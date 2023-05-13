@@ -1,6 +1,7 @@
 # Project specific ignores
 .venv
 *.DS_Store
+_images/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
