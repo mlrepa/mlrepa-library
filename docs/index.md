@@ -1,4 +1,4 @@
-![banner](static/main-banner.png)
+<!-- ![banner](static/main-banner.png) -->
 # Welcome to Machine Learning REPA Library
 
 Welcome to the community-driven Machine Learning REPA Library, your go-to resource for MLOps and ML Engineering solutions. This library is dedicated to providing the most up-to-date and relevant information, tutorials, and solutions to help you succeed in your machine learning projects.
