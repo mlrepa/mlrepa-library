@@ -75,32 +75,31 @@ Let’s dive in!
 
 1. `mkdir data` creates a new empty directory called `data`.
 
-    ```bash
-    # Create an empty `data/` directory
-    mkdir data
-    ```
+```bash
+# Create an empty `data/` directory
+mkdir data
+```
 2. `touch data/file.txt` creates a new file called `file.txt` in the `data` directory.
 
-    ```bash
-    # Create a `file.txt` in `data` dir
-    touch data/file.txt
-    ```
+```bash
+# Create a `file.txt` in `data` dir
+touch data/file.txt
+```
 3. `echo "data" >> .gitignore` adds the `data/` directory to the `.gitignore` file.
 
-    ```bash
-    # Add to `.gitignore` but make it visible in the Git repo
-    echo "data" >> .gitignore
-    ```
+```bash
+# Add to `.gitignore` but make it visible in the Git repo
+echo "data" >> .gitignore
+```
 4. `git add .gitignore && commit -m "Add .gitignore and data/ directory"` stages the `.gitignore` file and commits the changes with the message "Add .gitignore and data/ directory".
 
-    `git push myfork 4-git-fork` pushes the changes to the `4-git-fork` branch on the user fork on GitHub.
+`git push myfork 4-git-fork` pushes the changes to the `4-git-fork` branch on the user fork on GitHub.
 
-    ```bash
-    # Commit & push `4-git-fork` branch to GitHub (to user fork)
-    git add .gitignore && commit -m "Add `.gitignore` and `data/` directory"
-    git push myfork 4-git-fork
-
-    ```
+```bash
+# Commit & push `4-git-fork` branch to GitHub (to user fork)
+git add .gitignore && commit -m "Add `.gitignore` and `data/` directory"
+git push myfork 4-git-fork
+```
 
 Expected results:
 
@@ -118,30 +117,30 @@ Look closer!
 
 1. First, create a `.gitignore` file in the `data/` directory,
 
-    ```bash
-    # Create `data/.gititnore`
-    touch data/.gititnore
-    ```
+```bash
+# Create `data/.gititnore`
+touch data/.gititnore
+```
 2. add it to Git using force mode, 
 
-    ```bash
-    # Add `data/.gititnore` to Git (force mode)
-    git add data/.gitignore -f
-    ```
+```bash
+# Add `data/.gititnore` to Git (force mode)
+git add data/.gitignore -f
+```
 3. then commit and push the updates to the user's fork. 
 
-    ```bash
-    # Commit & push updates
-    git add .gitignore && commit -m "Make `data/` empty but visible"
-    git push myfork 4-git-fork
-    ```
+```bash
+# Commit & push updates
+git add .gitignore && commit -m "Make `data/` empty but visible"
+git push myfork 4-git-fork
+```
 4. Finally, delete the `4-git-fork`
  branch in the local repository.
 
-    ```bash
-    # Delete `4-git-fork` branch in the local repo
-    git branch -d 4-git-fork
-    ```
+```bash
+# Delete `4-git-fork` branch in the local repo
+git branch -d 4-git-fork
+```
 
 ### **6. Create a Merge Request**
 

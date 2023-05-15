@@ -75,23 +75,22 @@ Follow step by step tutorial to practice branching and merging
     ```
 2. `git checkout dev`: 
    This command switches you to the "dev" branch that you just created. Now any changes you make will be made to this branch instead of the main branch.
-
     ```bash
     # Checkout to a new branch
     git checkout dev
     ```
 3. `echo "My second commit" >> file.txt`: This command appends the string "My second commit" to the end of the file "file.txt". This is just an example change to demonstrate the concept of making changes to a branch.
-    
+  
     `cat file.txt`: This command simply prints out the contents of the file "file.txt" to the terminal.
 
     `git add . && git commit -m "Update file.txt: add a new line"`: These two commands add any changes you've made to the "dev" branch to the staging area and then commit those changes to the branch with a message that describes the changes you made. 
 
-        ```bash
-        # Update and commit
-        echo "My second commit" >> file.txt
-        cat file.txt 
-        git add . && git commit -m "Update file.txt: add a new line"
-        ```
+    ```bash
+    # Update and commit
+    echo "My second commit" >> file.txt
+    cat file.txt 
+    git add . && git commit -m "Update file.txt: add a new line"
+    ```
 4 - `git checkout main`: This command switches you    back to the "main" branch.
 
     `cat file.txt`: This command prints out the contents of the file "file.txt" on the main branch. Notice that the changes you made on the "dev" branch are not reflected here yet.
@@ -100,14 +99,14 @@ Follow step by step tutorial to practice branching and merging
 
     `cat file.txt`: This command prints out the contents of the file "file.txt" on the main branch again, now with the changes from the "dev" branch merged in.
 
-        ```bash
-        # Merge a `dev` branch to `main`
-        git checkout main 
-        cat file.txt
+    ```bash
+    # Merge a `dev` branch to `main`
+    git checkout main 
+    cat file.txt
 
-        git merge dev
-        cat file.txt
-        ```
+    git merge dev
+    cat file.txt
+    ```
 <br>
 
 If you still have questions about basic Git commands we can recommend you this video:
