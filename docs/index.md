@@ -1,6 +1,9 @@
 ---
-title: Welcome to Machine Learning REPA Library
+template: home.html
+title: Material for MkDocs
 ---
+
+Welcome to Material for MkDocs.
 
 
 <!-- ![banner](static/main-banner.png) -->
