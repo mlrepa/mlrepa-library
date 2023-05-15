@@ -1,10 +1,5 @@
 ---
 title: Welcome to Machine Learning REPA Library
-description: 
-⚛️ Reliable ML
-🧪 Experiments Management
-🛠️ Pipelines
-🤖 Automation
 ---
 
 
