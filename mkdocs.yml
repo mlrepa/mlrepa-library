@@ -107,6 +107,8 @@ nav:
       - Basic Git commands: project/2-git-basics.md
       - Git workflow - Remote: project/3-git-remote.md
       - Git workflow - Fork: project/4-git-fork.md
+      - Virtual Environments and Package Managers: project/project-2-virtualenv.md
+      - Docker: project/project-4-docker.md
    
     - DVC:
       - Get Started with DVC: dvc/dvc-1-get-started.md
