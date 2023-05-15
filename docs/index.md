@@ -1,3 +1,6 @@
+---
+title: Material for MkDocs
+---
 <!-- ![banner](static/main-banner.png) -->
 # Welcome to Machine Learning REPA Library
 
@@ -41,6 +44,18 @@ As an ML/MLOps engineer, it is crucial to embrace the REPA principles, which are
 <a
     href="https://www.linkedin.com/in/valeria-rozhkova-7a2710222/" target="_blank"
     >![Valeria Rozhkova](static/contributors/valeria-rozhkova.png){ width="150" }
+</a>
+<a
+    href="https://www.linkedin.com/in/olga-filippova-b029a51b9/" target="_blank"
+    >![Olga Filippova](static/contributors/olga-filippova.png){ width="150" }
+</a>
+<a
+    href="https://www.linkedin.com/in/vitbelov/" target="_blank"
+    >![Vitaly Belov](static/contributors/vitaly-belov.png){ width="150" }
+</a>
+<a
+    href="https://www.linkedin.com/in/gerofeev/" target="_blank"
+    >![Gleb Erofeev](static/contributors/gleb-erofeev.png){ width="150" }
 </a>
 
 
