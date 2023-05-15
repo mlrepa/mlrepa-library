@@ -60,6 +60,10 @@ As an ML/MLOps engineer, it is crucial to embrace the REPA principles, which are
     href="https://www.linkedin.com/in/vitbelov/" target="_blank"
     >![Vitaly Belov](static/contributors/vitaly-belov.png){ width="150" }
 </a>
+<a
+    href="https://www.linkedin.com/in/gerofeev/" target="_blank"
+    >![Gleb Erofeev](static/contributors/gleb-erofeev.png){ width="150" }
+</a>
 
 
 
