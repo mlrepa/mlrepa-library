@@ -31,6 +31,10 @@ As an ML/MLOps engineer, it is crucial to embrace the REPA principles, which are
     >![Gema Parreño Piqueras](static/contributors/gema-parreno-piqueras.png){ width="150" }
 </a>
 <a
+    href="https://www.linkedin.com/in/1aguschin/" target="_blank"
+    >![Alexander Gushcin](static/contributors/alex-guschin.png){ width="150" }
+</a>
+<a
     href="https://github.com/ankxyz" target="_blank"
     >![Alex Kolosov](static/contributors/alex-kolosov.png){ width="150" }
 </a>
