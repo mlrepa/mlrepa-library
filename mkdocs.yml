@@ -121,13 +121,14 @@ nav:
     # - Experiments Management:
       # - Metrics tracking: ''
     # - Pipelines: '' 
-    # - Automation: '' 
+    # - Automation: ''  
       
-  # - Production ML and MLOps: # Production techniques and patterns 
-  #   - mlops/index.md
-  #   - Overview: 
-        # - 'mlops/mlops-0-overview.md'
-        # - Overview: 'mlops/mlops-1-system-architecture.md'
+  - Production ML and MLOps: # Production techniques and patterns 
+    - mlops/index.md
+    - Overview: 
+      - Intro to Production ML and MLOps: mlops/mlops-0-overview.md
+      - ML Systems Architecture Design: mlops/mlops-1-system-architecture.md
+      - Web Services, Frameworks, APIs: mlops/mlops-2-api-frameworks.md
     # - Metrics tracking and Experiment: ''
     # - CI/CD for Machine Learning: ''
     # - Monitoring and Observability: ''
