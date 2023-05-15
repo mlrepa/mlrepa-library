@@ -90,7 +90,6 @@ To understand how data versioning works in DVC, let's perform the following step
     After adding the file under DVC control, we need to commit the changes to Git.
     
     ```bash
-    
     git add data/.gitignore data/data.xml.dvc
     git commit -m "Add raw data"
     ```

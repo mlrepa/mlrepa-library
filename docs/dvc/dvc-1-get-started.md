@@ -99,7 +99,7 @@ Now, a new file `data/iris.csv.dvc` will appear in the `data/` folder.
 
 - This file contains metadata that DVC uses to track the state (versions) of the `data/iris.csv` file.
 
-```
+```bash
 4.0K    data/iris.csv
 4.0K    data/iris.csv.dvc
 ```

@@ -51,35 +51,35 @@ Let’s see how to work with a remote repository using GitLab.
 
 1. First, we navigate to our project-1-git directory using the command `cd project-1-git`.
    
-    ```bash 
-    # Go to the repository 
-    cd project-1-git 
-    ```
+```bash 
+# Go to the repository 
+cd project-1-git 
+```
 2. Then, we create a new branch called `dev`. By this way you can make changes without affecting the main codebase. And we switch to new branch with the command `git checkout -b dev`.
    
-    ```bash 
-    # Create `dev` branch and checkout to it
-    git checkout -b dev
-    ```
+```bash 
+# Create `dev` branch and checkout to it
+git checkout -b dev
+```
 3. Next, we create a new file called `config.yaml` using the `touch` command and add a line to it using `echo "repo: project-1-git" >> config.yaml`. We confirm the changes using `cat config.yaml`.
  
-    ```bash 
-    #Create a config file 
-    touch config.yaml 
-    echo "repo: project-1-git" >> config.yaml
-    cat config.yaml
-    ```
+```bash 
+#Create a config file 
+touch config.yaml 
+echo "repo: project-1-git" >> config.yaml
+cat config.yaml
+```
 4. Also, we add and commit the changes to the local repository using `git add config.yaml && git commit -m "Add config.yaml"`.
    
-    ```bash 
-    # Commit changes
-    git add config.yaml && git commit -m "Add config.yaml"
-    ```
+```bash 
+# Commit changes
+git add config.yaml && git commit -m "Add config.yaml"
+```
 5. Finally, we push our changes to the remote repository on GitLab using `git push origin dev`. This will create a new branch on the remote repository with the changes we've made in our local repository.
-    ```bash 
-    # Push to GitLab 
-    git push origin dev
-    ``` 
+```bash 
+# Push to GitLab 
+git push origin dev
+``` 
 
 ### **3. Create a Merge Request**
 
