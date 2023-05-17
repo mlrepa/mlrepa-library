@@ -17,11 +17,14 @@ Learn how to:
 
 ## **⚒️ Tutorial: Docker**
 
-Docker is a powerful tool that helps developers package their software and all its dependencies into self-contained units known as Docker containers. 
+Docker is a powerful tool that helps developers package their software and all its dependencies into self-contained units known as Docker containers.
 
-![Source: [https://accesto.com/blog/when-to-use-and-when-not-to-use-docker/](https://accesto.com/blog/when-to-use-and-when-not-to-use-docker/) ](project-4-docker%207bd6b333f5ec4feb8c34421023c5a49a/Untitled.png)
-
-Source: [https://accesto.com/blog/when-to-use-and-when-not-to-use-docker/](https://accesto.com/blog/when-to-use-and-when-not-to-use-docker/) 
+<figure markdown>
+  ![Untitled](images/docker/project-4-docker-is.png){width="700" height="400"}
+    <figcaption>
+    Source: [What is Docker](https://accesto.com/blog/when-to-use-and-when-not-to-use-docker/)
+    </figcaption>
+</figure>
 
 **Good reasons to use Docker**
 
@@ -31,9 +34,13 @@ Source: [https://accesto.com/blog/when-to-use-and-when-not-to-use-docker/](https
 4. **Simplified Collaboration:** Docker enables team members to work with the same environment, facilitating collaboration and accurate reproduction of ML experiments.
 5. **Streamlined Deployment with CI/CD:** Docker integrates smoothly with CI/CD pipelines, automating testing, building, and deployment of ML applications, and enhancing production deployments.
 
-### Key Concepts
+### **Key Concepts**
 
-![Untitled](project-4-docker%207bd6b333f5ec4feb8c34421023c5a49a/Untitled%201.png)
+<figure markdown>
+  ![Untitled](images/docker/project-4-key-concepts.png){width="700" height="400"}
+    <figcaption>
+    </figcaption>
+</figure>
 
 Docker is an open platform for developing, shipping, and running applications.
 
@@ -85,19 +92,25 @@ Main Dockerfile statements:
 ### **Docker Hub**
 
 [Docker Hub](https://hub.docker.com/) is a registry of Docker images that contains images uploaded by third-party developers as well as images released by Docker developers.
-Find configured Docker images for different purposes, or store your own. 
+Find configured Docker images for different purposes, or store your own.
 
-![Source: [https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/](https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/) ](project-4-docker%207bd6b333f5ec4feb8c34421023c5a49a/Untitled%202.png)
-
-Source: [https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/](https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/) 
+<figure markdown>
+  ![Untitled](images/docker/project-4-dockerhub.png){width="700" height="400"}
+    <figcaption>
+    Source: [Docker Hub](https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/)
+    </figcaption>
+</figure>
 
 ## **Get Started: workflow**
 
 Take 10 minutes to follow the official tutorial: **[Get Started with Containerize an application](https://docs.docker.com/get-started/02_our_app/)**
 
-![Source: [https://weibeld.net/misc/docker-cheatsheet.html](https://weibeld.net/misc/docker-cheatsheet.html) ](project-4-docker%207bd6b333f5ec4feb8c34421023c5a49a/Untitled%203.png)
-
-Source: [https://weibeld.net/misc/docker-cheatsheet.html](https://weibeld.net/misc/docker-cheatsheet.html) 
+<figure markdown>
+  ![Untitled](images/docker/project-4-workflow.png){width="500" height="200"}
+    <figcaption>
+    Source: [Docker workflow](https://weibeld.net/misc/docker-cheatsheet.html)
+    </figcaption>
+</figure>
 
 Here is an explanation of the example "[Docker Hello World](https://hub.docker.com/_/hello-world)":
 
@@ -169,13 +182,16 @@ Passing it as an argument in the `docker run` command
 
 ## **🎼 Docker Compose**
 
-Docker Compose is a tool that allows you to define and manage multi-container applications using a YAML file. With Docker Compose, you can easily specify the services, networks, and volumes required for your application and launch them with a single command. 
+Docker Compose is a tool that allows you to define and manage multi-container applications using a YAML file. With Docker Compose, you can easily specify the services, networks, and volumes required for your application and launch them with a single command.
 
-![Source: [https://www.educative.io/blog/docker-compose-tutorial](https://www.educative.io/blog/docker-compose-tutorial) ](project-4-docker%207bd6b333f5ec4feb8c34421023c5a49a/Untitled%204.png)
+<figure markdown>
+  ![Untitled](images/docker/project-4-docker-compose.png){width="500" height="200"}
+    <figcaption>
+    Source: [Docker Compose](https://www.educative.io/blog/docker-compose-tutorial)
+    </figcaption>
+</figure>
 
-Source: [https://www.educative.io/blog/docker-compose-tutorial](https://www.educative.io/blog/docker-compose-tutorial) 
-
-Check out an official tutorial: [Use Docker Compose](https://docs.docker.com/get-started/08_using_compose/) 
+Check out an [official tutorial](https://docs.docker.com/get-started/08_using_compose/).
 
 ## **🏁 Conclusion**
 
@@ -215,7 +231,7 @@ By understanding the principles and techniques covered in this overview, you can
     
     Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
  
-    - ⭐ **Put a star on our [ML REPA library repository](https://gitlab.com/mlrepa/dvc-101/dvc-3-automate-experiments)** on GitHub
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub
     - 📣 **Share our tutorials** with others, and
     - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
     We would appreciate any suggestions or comments you may have

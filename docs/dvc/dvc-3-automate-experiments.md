@@ -200,7 +200,7 @@ Update the `dvc.yaml` file with the `evaluate` stage:
 	  - data/cm.csv
 ```
 
-???+ note "Final version of the `dvc.yaml` "
+???+ example "Final version of the `dvc.yaml` "
 
     ```yaml
     stages:
@@ -500,7 +500,7 @@ By exploring these additional resources, you can deepen your knowledge of DVC an
     
     Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
  
-    - ⭐ **Put a star on our [ML REPA library repository](https://gitlab.com/mlrepa/dvc-101/dvc-3-automate-experiments)** on GitHub
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub
     - 📣 **Share our tutorials** with others, and
     - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
     We would appreciate any suggestions or comments you may have

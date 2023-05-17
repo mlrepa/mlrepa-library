@@ -16,11 +16,14 @@ The **Production ML**  focuses on the practical aspects of deploying machine lea
 3. Gain knowledge of DevOps principles and practices and how they can be applied to ML systems for continuous integration, delivery, and automation.
 4. Explore the concept of MLOps and its role in standardizing processes and technology capabilities for building, deploying, and operationalizing ML systems.
 
-## **⚒️** Production ML
+## **⚒️ Production ML**
 
-![https://i.imgur.com/yk1f4v6.png](https://i.imgur.com/yk1f4v6.png)
-
-*Source:["Hidden Technical Debt in Machine Learning Systems" paper](https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)*
+<figure markdown>
+  ![Untitled](images/0/mlops-0-technical-debt.png){ width="700" height="400" }
+    <figcaption>
+    Source: ["Hidden Technical Debt in Machine Learning Systems" paper](https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
+    </figcaption>
+</figure>
 
 **Technical Debt** refers to accumulated problems in software code or architecture that arise from neglecting software quality during development, resulting in additional future work and costs.
 
@@ -40,9 +43,12 @@ ML systems differ from other software systems in the following ways:
 
 SDLC encompasses a set of processes that guide the entire software development journey. It starts with capturing the initial idea, documenting requirements, and progresses through various stages until the delivery of the finished software. Following the SDLC framework is essential for successful software delivery.
 
-![https://www.winklix.com/blog/wp-content/uploads/2019/09/edf02cb0ab3634c4944fb286c4fcd6926c058666.png](https://www.winklix.com/blog/wp-content/uploads/2019/09/edf02cb0ab3634c4944fb286c4fcd6926c058666.png)
-
-*Source: [https://www.winklix.com/blog/software-development-life-cycle-sdlc/](https://www.winklix.com/blog/software-development-life-cycle-sdlc/)*
+<figure markdown>
+  ![Untitled](images/0/mlops-0-ml-life-cycle.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Software Development Life Cycle (SDLC)](https://www.winklix.com/blog/wp-content/uploads/2019/09/edf02cb0ab3634c4944fb286c4fcd6926c058666.png)
+    </figcaption>
+</figure>
 
 **Benefits of Applying ML in SDLC**
 
@@ -57,9 +63,12 @@ SDLC encompasses a set of processes that guide the entire software development j
 
 ### **Project Management Methodologies**
 
-![https://blog.planview.com/wp-content/uploads/2017/12/agile-02-716x400.png](https://blog.planview.com/wp-content/uploads/2017/12/agile-02-716x400.png)
-
-*Source: [Waterfall or Agile](https://blog.planview.com/waterfall-or-agile/)*
+<figure markdown>
+  ![Untitled](images/0/mlops-0-waterfall-agile.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Waterfall or Agile](https://blog.planview.com/waterfall-or-agile/)
+    </figcaption>
+</figure>
 
 Common project management [methodologies for ML projects](https://neptune.ai/blog/data-science-project-management):
 
@@ -71,8 +80,6 @@ Common project management [methodologies for ML projects](https://neptune.ai/blo
 ### **DevOps**
 
 DevOps is a set of practices that combines software development (Dev) and IT infrastructure and service management (Ops). The goal of DevOps is to shorten the development cycle and ensure continuous delivery of high-quality updates.
-
-*Source: [A peek into Agile DevOps](https://medium.com/@mainakdutta76/before-and-after-of-devops-a-peek-into-agile-devops-3600c26129ac)*
 
 **Key DevOps Aspects**
 
@@ -86,9 +93,12 @@ DevOps is a set of practices that combines software development (Dev) and IT inf
 
 **DevOps Toolchain**
 
-![https://www.shalb.com/wp-content/uploads/2019/11/Devops1.jpeg](https://www.shalb.com/wp-content/uploads/2019/11/Devops1.jpeg)
-
-*Source: [What is DevOps and where is it applied](https://www.shalb.com/blog/what-is-devops-and-where-is-it-applied/)*
+<figure markdown>
+  ![Untitled](images/0/mlops-0-devops.png){ width="700" height="400" }
+    <figcaption>
+    Source: [What is DevOps and where is it applied](https://www.shalb.com/blog/what-is-devops-and-where-is-it-applied/)
+    </figcaption>
+</figure>
 
 ML and other software systems are similar in continuous integration of source control, unit testing, integration testing, and continuous delivery of software modules or packages. However, in ML, there are a few notable differences:
 
@@ -117,34 +127,53 @@ MLOps incorporates principles, practices, and technologies that aim to streamlin
 
 ### **MLOps Level 0: Manual Process**
 
-![[MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)](https://i.imgur.com/FvQw9d7.png)
-
-*Source: [MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)*
+<figure markdown>
+  ![Untitled](images/0/mlops-0-manual-process.png){ width="700" height="400" }
+    <figcaption>
+    Source: [MLOps: Continuous delivery and automation pipelines in ML](https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+    </figcaption>
+</figure>
 
 ### **MLOps Level 1: Automation of ML pipeline**
 
-![https://i.imgur.com/PiF2cCl.png](https://i.imgur.com/PiF2cCl.png)
+<figure markdown>
+  ![Untitled](images/0/mlops-0-automation-pipeline.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Automation of ML pipeline](https://i.imgur.com/PiF2cCl.png)
+    </figcaption>
+</figure>
 
 ### **MLOps Level 2: Automation of CI/CD pipeline**
 
-![https://i.imgur.com/9262z9p.png](https://i.imgur.com/9262z9p.png)
+<figure markdown>
+  ![Untitled](images/0/mlops-0-automation-ci:cd.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Automation of CI/CD pipeline](https://i.imgur.com/9262z9p.png)
+    </figcaption>
+</figure>
 
 ### **MLOps - Final Pipeline**
 
-![https://i.imgur.com/1pDgIKU.png](https://i.imgur.com/1pDgIKU.png)
+<figure markdown>
+  ![Untitled](images/0/mlops-0-final-pipeline.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Final Pipeline](https://i.imgur.com/1pDgIKU.png)
+    </figcaption>
+</figure>
 
 ## **🏁 Conclusion**
 
-1. DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
-2. Continuous Integration and Continuous Delivery are among the most important practices in DevOps.
-3. MLOps applies the DevOps approach to the development of ML systems, taking into account their specific requirements. Continuous Training is added as a practice due to the need for model updates.
+- DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
+- Continuous Integration and Continuous Delivery are among the most important practices in DevOps.
+- MLOps applies the DevOps approach to the development of ML systems, taking into account their specific requirements. Continuous Training is added as a practice due to the need for model updates.
 
 ## **🎓 Additional Resources**
 
 - [The MLOps Blueprint](https://medium.com/slalom-data-analytics/the-modern-mlops-blueprint-c8322af69d21)
 - [MLOps SIG](https://github.com/cdfoundation/sig-mlops/blob/master/roadmap/2020/MLOpsRoadmap2020.md)
-- *[Practitioners Guide to MLOps (Google)](https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf)*
+- [Practitioners Guide to MLOps (Google)](https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf)
 - [MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+- [A peek into Agile DevOps](https://medium.com/@mainakdutta76/before-and-after-of-devops-a-peek-into-agile-devops-3600c26129ac)
 
 !!! info " Contribute to the community! 🙏🏻 "
 
@@ -152,7 +181,7 @@ MLOps incorporates principles, practices, and technologies that aim to streamlin
     
     Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
  
-    - ⭐ **Put a star on our [ML REPA library repository](https://gitlab.com/mlrepa/dvc-101/dvc-3-automate-experiments)** on GitHub
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub
     - 📣 **Share our tutorials** with others, and
     - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
     We would appreciate any suggestions or comments you may have

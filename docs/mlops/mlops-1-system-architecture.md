@@ -12,14 +12,14 @@ Understanding ML system architecture is vital for several reasons. It provides a
 
 The primary goals of considering ML system architecture are:
 
-1. Define a clear and comprehensive architecture that aligns with the system's objectives and requirements.
-2. Identify and address potential technical debt specific to ML systems to ensure long-term maintainability.
-3. Balance development speed and reliability by making informed trade-offs during the architectural design phase.
-4. Enable seamless integration with existing infrastructure and tools, leveraging established practices and frameworks.
-5. Facilitate efficient data preprocessing, model training, and prediction serving processes within the system.
-6. Ensure scalability, allowing the system to handle increasing data volumes and user demands.
-7. Incorporate proper monitoring and error handling mechanisms to detect and resolve issues promptly.
-8. Promote collaboration and shared understanding among team members by documenting and communicating the system architecture effectively.
+- Define a clear and comprehensive architecture that aligns with the system's objectives and requirements.
+- Identify and address potential technical debt specific to ML systems to ensure long-term maintainability.
+- Balance development speed and reliability by making informed trade-offs during the architectural design phase.
+- Enable seamless integration with existing infrastructure and tools, leveraging established practices and frameworks.
+- Facilitate efficient data preprocessing, model training, and prediction serving processes within the system.
+- Ensure scalability, allowing the system to handle increasing data volumes and user demands.
+- Incorporate proper monitoring and error handling mechanisms to detect and resolve issues promptly.
+- Promote collaboration and shared understanding among team members by documenting and communicating the system architecture effectively.
 
 By achieving these goals, ML system architects can build robust and efficient systems that deliver reliable predictions and support continuous improvement and evolution of machine learning solutions.
 
@@ -29,9 +29,12 @@ By achieving these goals, ML system architects can build robust and efficient sy
 
 ML Solution Architecture refers to the design and organization of components and processes within a machine learning system to create an effective and scalable solution. It involves determining the structure and interaction between various elements such as data ingestion, preprocessing, model training, evaluation, deployment, and prediction serving.
 
-![Source: ["Hidden Technical Debt in Machine Learning Systems" paper](https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)](https://i.imgur.com/LzgGXiX.png)
-
-Source: ["Hidden Technical Debt in Machine Learning Systems" paper](https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
+<figure markdown>
+  ![Untitled](images/1/mlops-1-technical-debt.png){ width="700" height="400" }
+    <figcaption>
+    Source: ["Hidden Technical Debt in Machine Learning Systems" paper](https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
+    </figcaption>
+</figure>
 
 Key components and processes:
 
@@ -57,27 +60,26 @@ A well-designed ML solution architecture enables the development of robust, scal
 
 **Technical Debt** refers to the accumulated issues in software code or architecture that arise from neglecting software quality during development, resulting in additional future work and costs.
 
-<aside>
-💡 **ML Systems** have additional "capabilities" for accumulating technical debt. ML Engineers encounter this **first and foremost**.
-
-</aside>
+!!! Note 
+    **ML Systems** have additional "capabilities" for accumulating technical debt. ML Engineers encounter this **first and foremost**.
 
 Examples include unstable data dependencies, feedback loops, glue code, pipeline jungles, dead experimental code paths, fixed thresholds in dynamic systems, entanglement (CACE principle), and more.
 
 Initially, MLEs inherit all the problems and best practices from Software Engineering.
 
-![Source: [https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/)](https://i.imgur.com/KSDVAZZ.png)
-
-Source: [https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/)
+<figure markdown>
+  ![Untitled](images/1/mlops-1-problems-and-best-practices.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Clean architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/)
+    </figcaption>
+</figure>
 
 ### **Creating ML Systems**
 
-<aside>
-💡 To make great products: **do machine learning like the great engineer you are, not like the great machine learning expert you aren't**. 😄
-
-Source: [https://developers.google.com/machine-learning/guides/rules-of-ml](https://developers.google.com/machine-learning/guides/rules-of-ml)
-
-</aside>
+!!! Note
+    To make great products: **do machine learning like the great engineer you are, not like the great machine learning expert you aren't**. 😄
+    
+    Source: [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml)
 
 [Best Practices](https://developers.google.com/machine-learning/guides/rules-of-ml) for ML Engineering by Martin Zinkevich:
 
@@ -111,30 +113,17 @@ Here's the information organized into a table format:
 
 | Requirements  | Important information |
 | --- | --- |
-| Requirements for feature computation | On-the-fly or precomputed features?
-Tools/frameworks for feature computation?
-Scalability/performance requirements? |
-| Requirements for training | Frequency of training?
-Available training resources?
-Constraints/requirements for data handling? |
-| Requirements for prediction serving | Method of serving predictions?
-Response time requirements?
-Minimum acceptable prediction quality? |
-| Trade-off between development speed and reliability | Development speed vs. reliability priorities?
-Criticality of system reliability? |
-| Requirements for autonomy | Autonomous operation or human intervention?
-Desired level of decision-making autonomy?
-Regulatory/compliance considerations? |
-| Requirements for customizable processing | Need for data processing/model training customization?
-Incorporating custom algorithms or pipelines?
-Modular and configurable components? |
-| Requirements for handling private data | Privacy regulations/concerns?
-Security measures for private data?
-Data handling/encryption requirements? |
+| Requirements for feature computation | On-the-fly or precomputed features? <br> Tools/frameworks for feature computation? <br> Scalability/performance requirements? |
+| Requirements for training | Frequency of training? <br> Available training resources? <br> Constraints/requirements for data handling? |
+| Requirements for prediction serving | Method of serving predictions? <br> Response time requirements <br> Minimum acceptable prediction quality? |
+| Trade-off between development speed and reliability | Development speed vs. reliability priorities <br> Criticality of system reliability? |
+| Requirements for autonomy | Autonomous operation or human intervention? <br> Desired level of decision-making autonomy? <br> Regulatory/compliance considerations? |
+| Requirements for customizable processing | Need for data processing/model training customization <br> Incorporating custom algorithms or pipelines? <br> Modular and configurable components? |
+| Requirements for handling private data | Privacy regulations/concerns? <br> Security measures for private data? <br> Data handling/encryption requirements? |
 
 In this table, the requirements for architecture are listed in the left column, and specific details or questions related to each requirement are provided in the right column.
 
-### Feature Preprocessing
+### **Feature Preprocessing**
 
 There are usually two approaches:
 
@@ -145,46 +134,66 @@ Using existing data sources introduces integration challenges and imposes constr
 
 A **Feature Store** is used to store features, which are utilized during both training and prediction serving.
 
-![https://uploads-ssl.webflow.com/5f6353590bb01cacbcecfbac/6022bb585ddf720fe20f3566_graph_mainpage.png](https://uploads-ssl.webflow.com/5f6353590bb01cacbcecfbac/6022bb585ddf720fe20f3566_graph_mainpage.png)
+<figure markdown>
+  ![Untitled](images/1/mlops-1-feature-store.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Feature store](https://uploads-ssl.webflow.com/5f6353590bb01cacbcecfbac/6022bb585ddf720fe20f3566_graph_mainpage.png)
+    </figcaption>
+</figure>
 
 For example, [Hopsworks](https://docs.hopsworks.ai/latest/).
 
-### Training
+### **Training**
 
 - The most common approach is scheduled retraining - running code with cron jobs or task schedulers. *(This is practiced in our course)*
 - Another approach is online learning ([e.g., using Kafka and TensorFlow](https://www.tensorflow.org/io/tutorials/kafka#online_learning)).
 
-![Source: [https://towardsdatascience.com/machine-learning-in-production-using-apache-airflow-91d25a4d8152](https://towardsdatascience.com/machine-learning-in-production-using-apache-airflow-91d25a4d8152) ](https://miro.medium.com/max/700/1*QsFWK-skaXHCpmBoE_qKdA.png)
-
-Source: [https://towardsdatascience.com/machine-learning-in-production-using-apache-airflow-91d25a4d8152](https://towardsdatascience.com/machine-learning-in-production-using-apache-airflow-91d25a4d8152) 
+<figure markdown>
+  ![Untitled](images/1/mlops-1- ml-in-production.png){ width="500" height="200" }
+    <figcaption>
+    Source: [Feature store](https://towardsdatascience.com/machine-learning-in-production-using-apache-airflow-91d25a4d8152)
+    </figcaption>
+</figure>
 
 For example, [Machine Learning in Production using Apache Airflow](https://towardsdatascience.com/machine-learning-in-production-using-apache-airflow-91d25a4d8152).
 
-### Prediction Serving
+### **Prediction Serving**
 
-![Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) ](https://ml-ops.org/img/model-as-service.jpg)
-
-Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) 
+<figure markdown>
+  ![Untitled](images/1/mlops-1-model-as-service.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Model-as-Service](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines)
+    </figcaption>
+</figure>
 
 - Simple: Write a Python-based REST API wrapper *(This is practiced in our course)*
 - Fast: Rewrite code in Go/C++ and use gRPC
 
-![Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) ](https://ml-ops.org/img/model-as-dependency.jpg)
-
-Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) 
+<figure markdown>
+  ![Untitled](images/1/mlops-1-model-as-dependency.png){ width="500" height="200" }
+    <figcaption>
+    Source: [Model-as-Dependency](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines)
+    </figcaption>
+</figure>
 
 - In monolithic architecture applications
 - In mobile applications
 
-![Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) ](https://ml-ops.org/img/precompute-serving-pattern.jpg)
+<figure markdown>
+  ![Untitled](images/1/mlops-1-precompute-serving-pattern.png){ width="500" height="200" }
+    <figcaption>
+    Source: [Precompute serving pattern](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines)
+    </figcaption>
+</figure>
 
-Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) 
+<figure markdown>
+  ![Untitled](images/1/mlops-1-model-on-demand.png){ width="500" height="200" }
+    <figcaption>
+    Source: [Model-on-Demand](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines)
+    </figcaption>
+</figure> 
 
-![Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) ](https://ml-ops.org/img/model-on-demand.jpg)
-
-Source: [https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines](https://ml-ops.org/content/three-levels-of-ml-software#code-deployment-pipelines) 
-
-### ML as a part of Existing Services
+### **ML as a part of Existing Services**
 
 ML systems often arise on top of existing infrastructure:
 
@@ -195,7 +204,7 @@ In such cases, it is typical to use existing tools and approaches. For example, 
 
 This can have both advantages (no need to build everything from scratch) and disadvantages (using inconvenient tools).
 
-## Examples
+## **Examples**
 
 ### **Example 1: Practice in our course**
 
@@ -247,3 +256,18 @@ ML systems encompass a wide range of components and considerations, from feature
 - Clean Architecture: A Craftsman's Guide to Software Structure and Design, Robert C. Martin; [Short video about it](https://www.youtube.com/watch?v=DJtef410XaM)
 - A Philosophy of Software Design (2018), John Ousterhout
 - [Machine Learning in Production using Apache Airflow](https://towardsdatascience.com/machine-learning-in-production-using-apache-airflow-91d25a4d8152)
+
+!!! info " Contribute to the community! 🙏🏻 "
+
+    Hey! We hope you enjoyed the tutorial and learned a lot of useful techniques 🔥 
+    
+    Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
+ 
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub
+    - 📣 **Share our tutorials** with others, and
+    - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
+    We would appreciate any suggestions or comments you may have
+
+    Thank you for taking the time to help the community! 👍
+
+![Untitled](../assets/images/Footer.png)
