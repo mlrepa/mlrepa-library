@@ -20,6 +20,13 @@ In this tutorial, we'll go through the basics of installing and getting started 
 
 ## **⚒️ Tutorial: Get Started with DVC**
 
+### **Clone the repository**
+
+```bash
+git clone https://github.com/mlrepa/dvc-1-get-started.git
+cd dvc-1-get-started
+```
+
 ### **Initialize DVC**
 
 At this stage, it is assumed that you have successfully:
@@ -45,10 +52,11 @@ The contents of `.dvc` will look something like this:
 
 ```bash
 ./      
-../     
-.gitignore  
-cache/  
+../
+.gitignore
+cache
 config
+tmp
 ```
 
 - `config` is the DVC configuration file.
@@ -145,16 +153,23 @@ Let's create a pipeline with 4 stages:
 - train
 - evaluate
 
-To do this, we'll use the `dvc stage add` command.
+To do this, we'll use the [`dvc stage add`](https://dvc.org/doc/command-reference/stage/add) command.
 
 **Add a pipeline stage with `dvc stage add`**
 
+*Note*: earlier we added the file `data/iris.csv` under `DVC` control.
+To make this file output of a stage we have to remove it from `DVC` control:
+
+```bash
+dvc remove data/iris.csv.dvc
+```
+
 ```bash
 dvc stage add \
-    -n load_data \            # Stage name
-    -d src/load_data.py \     # Path to the input dependency of the stage
-    -o data/iris.csv \        # Path to the output of the stage
-    python src/load_data.py   # Command to execute the stage
+    -n load_data \
+    -d src/load_data.py \
+    -o data/iris.csv \
+    python src/load_data.py
 ```
 
 This command adds the `load_data` stage to the pipeline. 
@@ -178,17 +193,17 @@ Let’s create other stages
 ```bash
 dvc stage add \
     -n feature_extraction \
-    -d src/featurization.py \
+    -d src/featurize.py \
     -d data/iris.csv \
-    -o data/iris_featurized.csv \
-    python src/featurization.py
+    -o data/features_iris.csv \
+    python src/featurize.py
 ```
 
 ```bash
 dvc stage add \
     -n split_dataset \
     -d src/split_dataset.py \
-    -d data/iris_featurized.csv \
+    -d data/features_iris.csv \
     -o data/train.csv \
     -o data/test.csv \
     python src/split_dataset.py --test_size 0.4
@@ -212,7 +227,7 @@ dvc stage add \
     -d src/evaluate.py \
     -d data/test.csv \
     -d data/model.joblib \
-    -m data/eval.txt \          
+    -m data/eval.txt \
     python src/evaluate.py
 
 ```
