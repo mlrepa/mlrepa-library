@@ -91,63 +91,64 @@ A virtual environment does not fix system and driver settings; other tools, such
 ### **🔒 Locking the Environment with Pipenv**
 
 - Pipfile
+!!! example
+        ```toml
+        [[source]]
+        url = "<https://pypi.org/simple>"
+        verify_ssl = true
+        name = "pypi"
 
-    ```toml
-    [[source]]
-    url = "<https://pypi.org/simple>"
-    verify_ssl = true
-    name = "pypi"
+        [packages]
+        pandas = "==1.1.1"
 
-    [packages]
-    pandas = "==1.1.1"
+        [dev-packages]
 
-    [dev-packages]
-
-    [requires]
-    python_version = "3.7"
-    ```
+        [requires]
+        python_version = "3.7"
+        ```
 
 - Pipfile.lock
 
-    ```json
-    {
-        "_meta": {
-            "hash": {
-                "sha256": "8d14434df45e0ef884d6c3f6e8048ba72335637a8631cc44792f52fd20b6f97a"
+???+ example
+        ```json
+        {
+            "_meta": {
+                "hash": {
+                    "sha256": "8d14434df45e0ef884d6c3f6e8048ba72335637a8631cc44792f52fd20b6f97a"
+                },
+                "host-environment-markers": {
+                    "implementation_name": "cpython",
+                    "implementation_version": "3.6.1",
+                    "os_name": "posix",
+                    "platform_machine": "x86_64",
+                    "platform_python_implementation": "CPython",
+                    "platform_release": "16.7.0",
+                    "platform_system": "Darwin",
+                    "platform_version": "Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64",
+                    "python_full_version": "3.6.1",
+                    "python_version": "3.6",
+                    "sys_platform": "darwin"
+                },
+                "pipfile-spec": 5,
+                "requires": {},
+                "sources": [
+                    {
+                        "name": "pypi",
+                        "url": "<https://pypi.python.org/simple>",
+                        "verify_ssl": true
+                    }
+                ]
             },
-            "host-environment-markers": {
-                "implementation_name": "cpython",
-                "implementation_version": "3.6.1",
-                "os_name": "posix",
-                "platform_machine": "x86_64",
-                "platform_python_implementation": "CPython",
-                "platform_release": "16.7.0",
-                "platform_system": "Darwin",
-                "platform_version": "Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64",
-                "python_full_version": "3.6.1",
-                "python_version": "3.6",
-                "sys_platform": "darwin"
-            },
-            "pipfile-spec": 5,
-            "requires": {},
-            "sources": [
-                {
-                    "name": "pypi",
-                    "url": "<https://pypi.python.org/simple>",
-                    "verify_ssl": true
-                }
-            ]
-        },
-        "default": {
-            "certifi": {
-                "hashes": [
-                    "sha256:54a07c09c586b0e4c619f02a5e94e36619da8e2b053e20f594348c0611803704",
-                    "sha256:40523d2efb60523e113b44602298f0960e900388cf3bb6043f645cf57ea9e3f5"
-                ],
-                "version": "==2017.7.27.1"
-            },
-            ...
-    ```
+            "default": {
+                "certifi": {
+                    "hashes": [
+                        "sha256:54a07c09c586b0e4c619f02a5e94e36619da8e2b053e20f594348c0611803704",
+                        "sha256:40523d2efb60523e113b44602298f0960e900388cf3bb6043f645cf57ea9e3f5"
+                    ],
+                    "version": "==2017.7.27.1"
+                },
+                ...
+        ```
 
 ### **🔍 Inside the Pipenv Virtual Environment**
 
@@ -177,13 +178,24 @@ A virtual environment is physically a folder inside the project or in a specific
 - Fixing the environment is straightforward.
 - We will use this approach in our projects.
 
+## **🎓 Additional Resources**
+
+- [Python Packaging User Guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
+This guide provides an in-depth explanation of virtual environments and package management in Python, including best practices and usage examples.
+- [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) 
+This documentation offers a comprehensive guide on creating and managing environments using Conda, a popular package manager for Python and other languages. It covers topics such as creating, activating, and sharing environments.
+- [Virtualenv Documentation](https://virtualenv.pypa.io/en/latest/)
+This documentation focuses on the usage and benefits of Virtualenv, a widely used tool for creating isolated Python environments. It provides instructions on installation, creating virtual environments, and activating them.
+- [Pipenv Documentation](https://pipenv.pypa.io/en/latest/)
+This documentation introduces Pipenv, a tool that combines package management and virtual environments in a single solution. It covers the installation process, usage instructions, and advanced features like dependency resolution.
+
 !!! info " Contribute to the community! 🙏🏻 "
 
     Hey! We hope you enjoyed the tutorial and learned a lot of useful techniques 🔥 
     
     Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
  
-    - ⭐ **Put a star on our [ML REPA library repository](https://gitlab.com/mlrepa/dvc-101/dvc-3-automate-experiments)** on GitHub
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub
     - 📣 **Share our tutorials** with others, and
     - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
     We would appreciate any suggestions or comments you may have

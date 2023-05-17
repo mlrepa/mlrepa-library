@@ -2,11 +2,25 @@
 
 ## **👀 Overview**
 
+This tutorial covers the basics of RESTful APIs, including their principles and usage with HTTP methods. It introduces the cURL tool for interacting with web services and discusses the limitations of REST APIs. 
+
+Tutorial also presents gRPC as a high-performance alternative using Protocol Buffers and the HTTP/2 protocol. OpenAPI and Flask are briefly mentioned as tools for describing REST APIs and building web applications.
+
+Overall, this tutorial provides a concise introduction to these concepts, exploring the fundamentals of RESTful APIs and showcasing various frameworks and tools for web development.
+
 ## **🎯 Goals**
 
-## **⚒️ Tutorial:** Web Services, Frameworks, APIs
+- Learn the fundamentals of RESTful APIs, including their principles and usage with HTTP methods.
+- Gain an understanding of the cURL tool and its application in interacting with web services.
+- Explore the limitations of REST APIs and discover gRPC as a high-performance alternative.
+- Understand how gRPC leverages Protocol Buffers and the HTTP/2 protocol.
+- Introduction to OpenAPI and Flask as tools for describing REST APIs and building web applications.
+- Develop a solid foundation in RESTful API concepts.
+- Acquire knowledge of various frameworks and tools used in web development.
 
-### API
+## **⚒️ Tutorial: Web Services, Frameworks, APIs** 
+
+### **API**
 
 An Application Programming Interface (API) is a set of rules and protocols that allows different software applications to communicate and interact with each other. It defines the methods, data formats, and conventions that applications can use to request services from each other. 
 
@@ -15,7 +29,11 @@ APIs can be categorized into different types based on their purpose and implemen
 - Internal APIs (custom libraries) - for communication between microservices within an application/company.
 - External APIs (web services) - allow third-party developers to access a service over the internet using HTTP or other protocols.
 
-![https://media.geeksforgeeks.org/wp-content/uploads/20230216170349/What-is-an-API.png](https://media.geeksforgeeks.org/wp-content/uploads/20230216170349/What-is-an-API.png)
+<figure markdown>
+  ![Untitled](images/2/mlops-2-api.png){ width="700" height="400" }
+    <figcaption>
+    </figcaption>
+</figure>
 
 How to reconcile different APIs? - *REST* and *RPC*
 
@@ -23,9 +41,12 @@ How to reconcile different APIs? - *REST* and *RPC*
 
 REST API stands for Representational State Transfer Application Programming Interface. It is an architectural style used for designing networked applications, particularly web services. RESTful APIs are based on a set of principles and constraints that enable different systems to exchange data over the internet.
 
-![Source: [https://www.codecademy.com/article/what-is-rest](https://www.codecademy.com/article/what-is-rest) ](mlops-2-api-frameworks%20f25637039ae443e6a89a5be5a1133491/Untitled.png)
-
-Source: [https://www.codecademy.com/article/what-is-rest](https://www.codecademy.com/article/what-is-rest) 
+<figure markdown>
+  ![Untitled](images/2/mlops-2-rest-api.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Rest API](https://www.codecademy.com/article/what-is-rest )
+    </figcaption>
+</figure>
 
 So, REST is a set of [principles](http://www.restapitutorial.com/lessons/whatisrest.html#uniform-interface) that enable different systems to exchange data and scale applications. 
 
@@ -43,7 +64,12 @@ A RESTful API allows performing [CRUD operations](https://www.codecademy.com/art
 - **U - Update**
 - **D - Delete**
 
-![Untitled](mlops-2-api-frameworks%20f25637039ae443e6a89a5be5a1133491/Untitled%201.png)
+<figure markdown>
+  ![Untitled](images/2/mlops-2-crud.png){width="500" height="200"}
+    <figcaption>
+    Source: [CRUD](https://www.codecademy.com/article/what-is-rest )
+    </figcaption>
+</figure>
 
 CRUD corresponds the four HTTP methods:
 
@@ -54,9 +80,12 @@ CRUD corresponds the four HTTP methods:
 
 The response is usually returned in JSON or XML format (less common). Here is a general REST API model:
 
-![Source: [https://idratherbewriting.com/learnapidoc/docapis_what_is_a_rest_api.html](https://idratherbewriting.com/learnapidoc/docapis_what_is_a_rest_api.html) ](https://s3.us-west-1.wasabisys.com/idbwmedia.com/images/api/restapi_restapi.svg)
-
-Source: [https://idratherbewriting.com/learnapidoc/docapis_what_is_a_rest_api.html](https://idratherbewriting.com/learnapidoc/docapis_what_is_a_rest_api.html) 
+<figure markdown>
+  ![Untitled](images/2/mlops-2-rest-api-model.png){ width="700" height="400" }
+    <figcaption>
+    Source: [REST API model](https://idratherbewriting.com/learnapidoc/docapis_what_is_a_rest_api.html)
+    </figcaption>
+</figure>
 
 **REST API examples** 
 
@@ -128,9 +157,9 @@ Request:
 DELETE /api/train_samples/1
 ```
 
-:::info :pushpin: [Another example of API method description](https://gist.github.com/iros/3426278) :::
+[Another example of API method description](https://gist.github.com/iros/3426278)
 
-### Response Codes
+### **Response Codes**
 
 | Code | Name | Description |
 | --- | --- | --- |
@@ -148,9 +177,9 @@ DELETE /api/train_samples/1
 | 405 | Method Not Allowed | The client attempted to use a method that is not allowed for the resource. For example, using the DELETE method, but the resource does not support it. |
 | 500 | Server Error | General response for a server-side error when no other error code is applicable. |
 
-Learn more: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+Learn more: [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
 
-### cURL tool
+### **cURL tool**
 
 cURL (pronounced "curl") is a command-line tool and library for making HTTP requests and interacting with web services. 
 
@@ -161,14 +190,12 @@ Installation
 - Available in MacOS, Ubuntu - accessible from the command line.
 - Requires installation on Windows. [Instructions.](https://curl.se/) Alternatively, you can install Git Bush.
 
-<aside>
-💡 **Note:** 
+!!! Note
+    💡 To check the installation in Windows, open the command prompt *cmd* ➜ *curl -V*. If installed, you'll see a message like:
 
-To check the installation in Windows, open the command prompt *cmd* ➜ *curl -V*. If installed, you'll see a message like:
-
-```bash
-curl 7.55.1 (Windows) libcurl/7.55.1 WinSSL
-```
+    ```bash
+    curl 7.55.1 (Windows) libcurl/7.55.1 WinSSL
+    ```
 
 </aside>
 
@@ -237,7 +264,7 @@ Let’s look on a few examples of using **cURL**. You may find more examples and
 - `L` - for handling redirects (if the resource has moved).
 - `O` - to save with the same name, or `o data.json` to specify a new name.
 
-### Drawbacks/Features of REST API:
+### **Drawbacks/Features of REST API:**
 
 - Need to develop language-specific APIs for each language. (Swagger can be used, which we'll cover later)
 - JSON for data transfer is not a binary format. Slower data transfer but easier to view data.
@@ -245,13 +272,18 @@ Let’s look on a few examples of using **cURL**. You may find more examples and
 
 These drawbacks are addressed by **gRPC (Google Remote Procedure Call)**.
 
-### gRPC
+### **gRPC**
 
 **gRPC (Google Remote Procedure Call)** is an open-source high-performance framework developed by Google. It is designed for efficient and reliable communication between distributed systems and allows developers to define services and message types using Protocol Buffers (protobuf), a language-agnostic binary serialization format.
 
 gRPC is based on **RPC** (Remote Procedure Call) - invoking remote code on other machines.
 
-[https://i.imgur.com/BxyZuSA.png%20=280x](https://i.imgur.com/BxyZuSA.png%20=280x)
+<figure markdown>
+  ![Untitled](images/2/mlops-2-rpc.png){ width="500" height="2 00" }
+    <figcaption>
+    Source: [Remote Procedure Call](https://i.imgur.com/BxyZuSA.png%20=280x)
+    </figcaption>
+</figure>
 
 **Differences:**
 
@@ -266,12 +298,17 @@ gRPC is based on **RPC** (Remote Procedure Call) - invoking remote code on other
 - For distributed systems with microservices, choose gRPC.
 - For streaming data (e.g., sensor data), choose gRPC.
 
-Useful links: 
+You can know more details here:
 - [Quick Start and gRPC Guide for Python](https://grpc.io/docs/languages/python/)
 
-### OpenAPI
+### **OpenAPI** 
 
-[https://i.imgur.com/Ou2JKbZ.png%20=150x](https://i.imgur.com/Ou2JKbZ.png%20=150x)
+<figure markdown>
+  ![Untitled](images/2/mlops-2-openapi.png){width="200" height="50" }
+    <figcaption>
+    Source: [OpenAPI](https://i.imgur.com/BxyZuSA.png%20=280x)
+    </figcaption>
+</figure>
 
 The widely accepted format for describing REST APIs is OpenAPI, also known as Swagger.
 
@@ -281,11 +318,16 @@ The specification is a single file in JSON or YAML format, consisting of three s
 2. Description of all resources, including their identifiers, HTTP methods, input parameters, response codes, and response body formats.
 3. Definitions of objects using JSON Schema format, which can be used for both input parameters and responses.
 
-## Web Frameworks
+## **Web Frameworks**
 
-## Flask
+## **Flask**
 
-[https://i.imgur.com/yw7LlOi.png%20=100x](https://i.imgur.com/yw7LlOi.png%20=100x)
+<figure markdown>
+  ![Untitled](images/2/mlops-2-flask.png){width="100" height="30" }
+    <figcaption>
+    Source: [Flask](https://flask.palletsprojects.com/en/2.3.x/#)
+    </figcaption>
+</figure>
 
 What is it? - A web framework for Python.
 
@@ -301,7 +343,7 @@ Additionally, Flask is the best choice if:
 - Implementing a REST API without frontend.
 - Needing flexible customization.
 
-### Minimal Flask App
+### **Minimal Flask App**
 
 ```python
 from flask import Flask
@@ -322,14 +364,10 @@ After running the application, you will see the following message:
 Running on <http://127.0.0.1:5000/>
 ```
 
-<aside>
-💡 **Note:** 
+!!! Note
+    💡 Localhost - with IP address 127.0.0.1 ➜ the computer's internal network.
 
-Localhost - with IP address 127.0.0.1 ➜ the computer's internal network.
-
-</aside>
-
-### Parameters for app.run()
+### **Parameters for app.run()**
 
 **1. Debug mode**:
 
@@ -337,8 +375,8 @@ Localhost - with IP address 127.0.0.1 ➜ the computer's internal network.
 app.run(debug=True)
 ```
 
-> The server restarts automatically when code changes.It allows working with a debugger.Remember to disable it when deploying the service.
-> 
+!!! Note
+    The server restarts automatically when code changes.It allows working with a debugger.Remember to disable it when deploying the service.
 
 **2. Make the server publicly accessible**
 
@@ -348,7 +386,7 @@ app.run(host='0.0.0.0')
 
 By default, it is only accessible locally.
 
-### Templates
+### **Templates**
 
 A template is a file containing HTML code and markup elements that allow for displaying dynamic content.
 
@@ -384,11 +422,11 @@ def index():
     return render_template('index.html', pred=model.prediction)
 ```
 
-### Flask API
+### **Flask API**
 
 **Flask-RESTX** is an extension for Flask that adds support for rapid development of REST APIs.
 
-Documentation: [https://flask-restx.readthedocs.io/en/latest/index.html](https://flask-restx.readthedocs.io/en/latest/index.html)
+[Documentation of Flask-RESTX](https://flask-restx.readthedocs.io/en/latest/index.html)
 
 Alternatives: *flask-restplus*, *flask-restful*
 
@@ -419,19 +457,29 @@ Flask-RESTX provides a set of tools for generating documentation using Swagger.
 
 The **Swagger API documentation** is generated automatically and can be accessed via the root URL of the API:
 
-[https://i.imgur.com/RCr0bUH.png%20=800x](https://i.imgur.com/RCr0bUH.png%20=800x)
+<figure markdown>
+  ![Untitled](images/2/mlops-2-swagger-api.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Swagger API](https://swagger.io/docs/)
+    </figcaption>
+</figure>
 
-### Deployment
+### **Deployment**
 
 [Step-by-step guide on how to deploy a Flask application on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)
 
 Deployment will be covered in more detail in the 4th lecture. It will also be beneficial to have a basic understanding of Git.
 
-## Django
+## **Django**
 
-[https://i.imgur.com/exGf2vi.png%20=150x](https://i.imgur.com/exGf2vi.png%20=150x)
+<figure markdown>
+  ![Untitled](images/2/mlops-2-django.png){width="200" height="50"}
+    <figcaption>
+    Source: [Django](https://www.djangoproject.com/)
+    </figcaption>
+</figure>
 
-- What is it? - Another popular Python framework for web application or API development.
+Django is another popular Python framework for web application or API development.
 
 Features:
 
@@ -441,7 +489,7 @@ Features:
 
 Django is a good choice for rapid development of scalable applications. However, it may not be the best choice for microservices, simple frontend-less API applications, or database-less applications.
 
-## FastAPI
+## **FastAPI**
 
 **Advantages:**
 
@@ -456,17 +504,18 @@ Installation:
 pip install uvicorn fastapi pydantic
 ```
 
-Interactive documentation:
+[Interactive documentation](http://127.0.0.1:8000/docs)
 
-[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+## **Streamlit**
 
-## Streamlit
+<figure markdown>
+  ![Untitled](images/2/mlops-2-streamlit.png){ width="700" height="400" }
+    <figcaption>
+    Source: [Evidently AI](https://www.evidentlyai.com/blog/ml-model-monitoring-dashboard-tutorial)
+    </figcaption>
+</figure>
 
-![Source: [https://www.evidentlyai.com/blog/ml-model-monitoring-dashboard-tutorial](https://www.evidentlyai.com/blog/ml-model-monitoring-dashboard-tutorial) ](mlops-2-api-frameworks%20f25637039ae443e6a89a5be5a1133491/Untitled%202.png)
-
-Source: [https://www.evidentlyai.com/blog/ml-model-monitoring-dashboard-tutorial](https://www.evidentlyai.com/blog/ml-model-monitoring-dashboard-tutorial) 
-
-- What is it? - An open-source Python framework for rapid development of machine learning dashboards without requiring frontend knowledge (HTML, CSS, and JavaScript).
+Streamlit is an open-source Python framework for rapid development of machine learning dashboards without requiring frontend knowledge (HTML, CSS, and JavaScript).
 
 **Installation**
 
@@ -485,9 +534,9 @@ pip install streamlit
     - Matplotlib
     - Component for rendering Folium maps.
 
-**🔗 Useful links:** 
+**🔗 Useful links:**
 
-- [A tutorial on building ML and data monitoring dashboards with Evidently and Streamlit](https://www.evidentlyai.com/blog/ml-model-monitoring-dashboard-tutorial) ********
+- [A tutorial on building ML and data monitoring dashboards with Evidently and Streamlit](https://www.evidentlyai.com/blog/ml-model-monitoring-dashboard-tutorial)
 
 ## **🏁 Conclusion**
 
@@ -513,4 +562,19 @@ Overall, REST API and gRPC offer different approaches to web services, while web
 - [What is a REST API?](https://idratherbewriting.com/learnapidoc/docapis_what_is_a_rest_api.html) by Tom Johnson
 - [What is REST? by CodeAcademy](https://www.codecademy.com/article/what-is-rest)
 - [APIs for Model Serving by Goku Mohandas](https://madewithml.com/courses/mlops/api/#request)
-- [Run Curl Commands Online](https://reqbin.com/curl) ****
+- [Run Curl Commands Online](https://reqbin.com/curl)
+
+!!! info " Contribute to the community! 🙏🏻 "
+
+    Hey! We hope you enjoyed the tutorial and learned a lot of useful techniques 🔥 
+    
+    Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
+ 
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub
+    - 📣 **Share our tutorials** with others, and
+    - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
+    We would appreciate any suggestions or comments you may have
+
+    Thank you for taking the time to help the community! 👍
+
+![Untitled](../assets/images/Footer.png)

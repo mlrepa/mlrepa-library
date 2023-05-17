@@ -421,7 +421,7 @@ By leveraging these additional resources, you can continue to build your experti
     
     Please 🙏🏻 take a moment to improve our tutorials and create better learning experiences for the whole community. You could
  
-    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/dvc-2-data-versioning)** on GitHub
+    - ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub
     - 📣 **Share our tutorials** with others, and
     - :fontawesome-solid-paper-plane: **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
     We would appreciate any suggestions or comments you may have
