@@ -80,7 +80,7 @@ To understand how data versioning works in DVC, let's perform the following step
     
     ```bash
     # Download the data file
-    get https://github.com/iterative/dataset-registry	get-started/data.xml -o data/data.xml
+    dvc get https://github.com/iterative/dataset-registry	get-started/data.xml -o data/data.xml
     
     # Add the data file under DVC control
     dvc add data/data.xml -v
@@ -124,8 +124,8 @@ For this example, let's test the concept of a Data Registry. DVC allows us to us
 
 ```bash
 # Download the cats-dogs dataset
-dvc get --rev cats-dogs-v1 \\
-    <https://github.com/iterative/dataset-registry> \\
+dvc get --rev cats-dogs-v1 \
+    https://github.com/iterative/dataset-registry \
     use-cases/cats-dogs -o datadir
 
 ```
@@ -193,8 +193,8 @@ rm -rf datadir/cats-dogs
 Now, let's fetch the new data:
 
 ```bash
-dvc get --rev cats-dogs-v2 \\
-    <https://github.com/iterative/dataset-registry> \\
+dvc get --rev cats-dogs-v2 \
+    https://github.com/iterative/dataset-registry \
     use-cases/cats-dogs -o datadir
 ```
 
@@ -372,7 +372,7 @@ You can use the `dvc list` command to explore the DVC registry hosted on any Git
 For example, let's see what is available in the `use-cases/` directory of the `https://github.com/iterative/dataset-registry` repository:
 
 ```bash
-dvc list <https://github.com/iterative/dataset-registry> use-cases
+dvc list https://github.com/iterative/dataset-registry use-cases
 ```
 
 **Download a dataset with `dvc get`**
@@ -380,7 +380,7 @@ dvc list <https://github.com/iterative/dataset-registry> use-cases
 The `dvc get` command allows you to download a dataset to your working area without DVC control. It fetches the dataset from the specified location:
 
 ```
-dvc get <https://github.com/iterative/dataset-registry> use-cases/cats-dogs
+dvc get https://github.com/iterative/dataset-registry use-cases/cats-dogs
 ```
 
 After running this command, you will see the downloaded `cats-dogs/` folder, but it is not under DVC control. There won't be a `cats-dogs.dvc` file.
