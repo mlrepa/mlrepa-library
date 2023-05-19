@@ -324,7 +324,7 @@ By mastering the fundamentals covered in this tutorial, you are now equipped wit
 ## **🎓 Additional Resources**
 
 1. **[DVC Official Documentation](https://dvc.org/doc)**: The official documentation is a comprehensive resource that provides detailed information about various DVC features, commands, and best practices. It includes tutorials, examples, and reference guides.
-2. **[DVC YouTube Channel](https://www.youtube.com/c/DvcOrg)**: The DVC YouTube channel hosts a collection of tutorial videos, presentations, and demos that cover different aspects of using DVC for data versioning and pipeline management. It's a great visual resource to enhance your understanding.
+2. **[DVC YouTube Channel](https://www.youtube.com/@dvcorg8370)**: The DVC YouTube channel hosts a collection of tutorial videos, presentations, and demos that cover different aspects of using DVC for data versioning and pipeline management. It's a great visual resource to enhance your understanding.
 3. **[Getting Started With DVC (DAGsHub)](https://dagshub.com/blog/getting-started-with-dvc/)**
 
 !!! info " Contribute to the community! 🙏🏻 "

@@ -489,7 +489,7 @@ With DVC, we have a powerful tool to ensure reproducibility, collaboration, and 
 To further enhance your understanding of DVC and explore more advanced topics, consider checking out the following resources:
 
 1. [DVC Documentation](https://dvc.org/doc/start): The official documentation provides comprehensive information on DVC's features, concepts, and usage. It includes detailed guides, tutorials, and reference materials.
-2. [DVC YouTube Channel](https://www.youtube.com/c/DVCorg): The DVC YouTube channel features a collection of video tutorials, demos, and talks on various aspects of DVC. It's a great resource to visually learn about DVC's capabilities.
+2. [DVC YouTube Channel](https://www.youtube.com/@dvcorg8370): The DVC YouTube channel features a collection of video tutorials, demos, and talks on various aspects of DVC. It's a great resource to visually learn about DVC's capabilities.
 3. [DVC Forum](https://discuss.dvc.org/): The DVC Forum is a community-driven platform where you can ask questions, share ideas, and engage in discussions related to DVC. It's a valuable resource for seeking assistance and connecting with other DVC users.
 
 By exploring these additional resources, you can deepen your knowledge of DVC and unlock its full potential for managing data and models in your machine learning projects.
