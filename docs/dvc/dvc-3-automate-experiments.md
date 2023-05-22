@@ -6,7 +6,7 @@
 
 This tutorial provides a comprehensive demonstration of approaches to automate machine learning experiments using DVC (Data Version Control).
 
-🧑‍💻 [Repository for this tutorial](https://gitlab.com/mlrepa/dvc-101/dvc-3-automate-experiments)
+🧑‍💻 [Repository for this tutorial](https://github.com/mlrepa/dvc-3-automate-experiments)
 
 !!! note "Important"
     - Instructions for setting up the environment are in the repository's README.
@@ -76,15 +76,16 @@ To create a `dvc.yaml` file and add the `data_load` stage to it, follow the inst
 2. Open the `dvc.yaml` file in a text editor and add the following content:
 
 ```yaml
-	data_load:
-	  cmd: python src/data_load.py --config=params.yaml
-	  deps:
-	  - src/data_load.py
-	  params:
-	  - data_load
-	  outs:
-	  - data/classes.json
-	  - data/iris.csv
+stages:
+  data_load:
+    cmd: python src/data_load.py --config=params.yaml
+    deps:
+    - src/data_load.py
+    params:
+    - data_load
+    outs:
+    - data/classes.json
+    - data/iris.csv
 ```
 
 Explanation of the `data_load` stage configuration:
@@ -130,16 +131,16 @@ To build an end-to-end machine learning pipeline, you need to add stages for fea
 Update the `dvc.yaml` file with the `feature_extraction` stage:
 
 ```yaml
-	feature_extraction:
-	  cmd: python src/featurization.py --config=params.yaml
-	  deps:
-	  - data/iris.csv
-	  - src/featurization.py
-	  params:
-	  - data_load
-	  - featurize
-	  outs:
-	  - data/iris_featurized.csv
+  feature_extraction:
+    cmd: python src/featurization.py --config=params.yaml
+    deps:
+    - data/iris.csv
+    - src/featurization.py
+    params:
+    - data_load
+    - featurize
+    outs:
+    - data/iris_featurized.csv
 ```
 
 **4 - Add split train/test stage**
@@ -147,17 +148,17 @@ Update the `dvc.yaml` file with the `feature_extraction` stage:
 Update the `dvc.yaml` file with the `split_dataset` stage:
 
 ```yaml
-	split_dataset:
-	  cmd: python src/split_dataset.py --config=params.yaml
-	  deps:
-	  - data/iris_featurized.csv
-	  - src/split_dataset.py
-	  params:
-	  - data_split
-	  - featurize
-	  outs:
-	  - data/test.csv
-	  - data/train.csv
+  split_dataset:
+    cmd: python src/split_dataset.py --config=params.yaml
+    deps:
+    - data/iris_featurized.csv
+    - src/split_dataset.py
+    params:
+    - data_split
+    - featurize
+    outs:
+    - data/test.csv
+    - data/train.csv
 ```
 
 **5 - Add train stage**
@@ -165,16 +166,16 @@ Update the `dvc.yaml` file with the `split_dataset` stage:
 Update the `dvc.yaml` file with the `train` stage:
 
 ```yaml
-	train:
-	  cmd: python src/train.py --config=params.yaml
-	  deps:
-	  - data/train.csv
-	  - src/train.py
-	  params:
-	  - data_split
-	  - train
-	  outs:
-	  - data/model.joblib
+  train:
+    cmd: python src/train.py --config=params.yaml
+    deps:
+    - data/train.csv
+    - src/train.py
+    params:
+    - data_split
+    - train
+    outs:
+    - models/model.joblib
 ```
 
 **6 - Add evaluate stage**
@@ -182,22 +183,22 @@ Update the `dvc.yaml` file with the `train` stage:
 Update the `dvc.yaml` file with the `evaluate` stage:
 
 ```yaml
-	evaluate:
-	  cmd: python src/evaluate.py --config=params.yaml
-	  deps:
-	  - data/classes.json
-	  - data/model.joblib
-	  - data/test.csv
-	  - src/evaluate.py
-	  params:
-	  - data_load
-	  - data_split
-	  - evaluate
-	  - train
-	  metrics:
-	  - data/metrics.json
-	  plots:
-	  - data/cm.csv
+  evaluate:
+    cmd: python src/evaluate.py --config=params.yaml
+    deps:
+    - data/classes.json
+    - data/test.csv
+    - models/model.joblib
+    - src/evaluate.py
+    params:
+    - data_load
+    - data_split
+    - evaluate
+    - train
+    metrics:
+    - reports/metrics.json
+    plots:
+    - reports/cm.csv
 ```
 
 ???+ example "Final version of the `dvc.yaml` "
@@ -206,7 +207,7 @@ Update the `dvc.yaml` file with the `evaluate` stage:
     stages:
       
     	data_load:
-    	  cmd: python src/data_load.py --config=params.yaml
+        cmd: python src/data_load.py --config=params.yaml
         deps:
         - src/data_load.py
         params:
@@ -214,7 +215,7 @@ Update the `dvc.yaml` file with the `evaluate` stage:
         outs:
         - data/classes.json
         - data/iris.csv
-    
+
       feature_extraction:
         cmd: python src/featurization.py --config=params.yaml
         deps:
@@ -225,7 +226,7 @@ Update the `dvc.yaml` file with the `evaluate` stage:
         - featurize
         outs:
         - data/iris_featurized.csv
-    
+
       split_dataset:
         cmd: python src/split_dataset.py --config=params.yaml
         deps:
@@ -237,7 +238,7 @@ Update the `dvc.yaml` file with the `evaluate` stage:
         outs:
         - data/test.csv
         - data/train.csv
-    
+
       train:
         cmd: python src/train.py --config=params.yaml
         deps:
@@ -247,14 +248,14 @@ Update the `dvc.yaml` file with the `evaluate` stage:
         - data_split
         - train
         outs:
-        - data/model.joblib
-    
+        - models/model.joblib
+
       evaluate:
         cmd: python src/evaluate.py --config=params.yaml
         deps:
         - data/classes.json
-        - data/model.joblib
         - data/test.csv
+        - models/model.joblib
         - src/evaluate.py
         params:
         - data_load
@@ -262,12 +263,13 @@ Update the `dvc.yaml` file with the `evaluate` stage:
         - evaluate
         - train
         metrics:
-        - data/metrics.json
+        - reports/metrics.json
         plots:
-        - data/cm.csv
+        - reports/cm.csv
     ```
 
 **Run DVC pipeline**
+
 Execute the following command to run the DVC pipeline:
 
 ```bash
@@ -357,8 +359,7 @@ clf = LogisticRegression(
 		C=0.01,
 		solver='lbfgs',
 		multi_class='multinomial',
-		max_iter=100,
-		random_state=config.base.random_state
+		max_iter=100
 )
 ```
 
@@ -373,7 +374,7 @@ dvc exp run -n exp2-tuning-logreg
 We can examine the difference in metrics compared to the previous pipeline run using the following commands:
 
 ```bash
-cat data/metrics.json
+cat reports/metrics.json
 
 ```
 
@@ -409,11 +410,10 @@ Next, we update the `train.py` file by replacing the lines for the Logistic Regr
 
 ```python
 clf = SVC(
-		C=0.1,
-		kernel='linear',
-		gamma='scale',
-		degree=5,
-		random_state=config.base.random_state
+    C=0.1,
+    kernel='linear',
+    gamma='scale',
+    degree=5
 )
 ```
 
@@ -450,9 +450,9 @@ By switching to the SVM model and evaluating its performance, we can compare it 
     </figcaption>
 </figure>
 
-To visualize the metrics and results of the experiments, you can use the `dvc exp show` command. This command provides a detailed overview of the experiment, including the metrics, parameters, and other relevant information.
+To visualize the metrics and results of the experiments, you can use the [`dvc exp show`](https://dvc.org/doc/command-reference/exp/show) command. This command provides a detailed overview of the experiment, including the metrics, parameters, and other relevant information.
 
-To save or commit the experiment and its results, you can use the `dvc exp push` command. This command saves the experiment and its associated data, metrics, and parameters, allowing you to track and share the experiment with others.
+To save or commit the experiment and its results, you can use the [`dvc exp push`](https://dvc.org/doc/command-reference/exp/push) command. This command saves the experiment and its associated data, metrics, and parameters, allowing you to track and share the experiment with others.
 
 ### **Use VSCode extension for DVC**
 
