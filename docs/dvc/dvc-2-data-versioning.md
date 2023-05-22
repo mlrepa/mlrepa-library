@@ -410,7 +410,7 @@ Start using DVC in your data science projects to keep track of your data, manage
 To further enhance your understanding of data versioning with DVC, consider exploring the following resources:
 
 1. [DVC Documentation](https://dvc.org/doc/start): The official documentation provides comprehensive information on using DVC and its various features.
-2. [DVC YouTube Channel](https://www.youtube.com/c/DVCorg): The official DVC YouTube channel hosts a collection of video tutorials and demos to deepen your knowledge of DVC.
+2. [DVC YouTube Channel](https://www.youtube.com/@dvcorg8370): The official DVC YouTube channel hosts a collection of video tutorials and demos to deepen your knowledge of DVC.
 3. [DVC Community Forum](https://discuss.dvc.org/): Join the DVC community forum to engage with other users, ask questions, and share your experiences with DVC.
 
 By leveraging these additional resources, you can continue to build your expertise in data versioning with DVC and unlock its full potential for your data science projects.
