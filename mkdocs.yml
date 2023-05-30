@@ -91,6 +91,11 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/groups/9320089/
 
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - js/tablesort.js
+
+
 # Page tree
 nav:
   - ML REPA: 
@@ -98,6 +103,7 @@ nav:
     # - Community: ''
     - Contributors Guide: community/contribution-guide.md
     - Author Guide: community/author-guide.md
+    - Roadmap: repa/roadmap.md
 
   - Tutorials: # tool features
     - Get Started: 
@@ -141,3 +147,7 @@ nav:
   #   - NLP: ''
   #   - LLM: ''
   #   - Instruct Models: GPT...
+
+  - Resources:
+    - Projects: resources/projects.md
+    - Resources: resources/resources.md
