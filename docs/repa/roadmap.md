@@ -8,5 +8,5 @@
 |-----------------------|----------------------------------------|-------|
 | Building a Model Registry using DVC and GTO   | DVC, GTO     | 1     |
 | Data validation and Model Monitoring pipelines with DVC and Evidently       | DVC, Evidently         | 1     |
-| Model Deployment with FastAPI and Docker   | Docker, FastAPI     | 0     |
+| Model Deployment with FastAPI and Docker   | Docker, FastAPI     | 1     |
 | End-to-end pipeline to train LLM   | HuggingFace, LangChain     | 1      |
