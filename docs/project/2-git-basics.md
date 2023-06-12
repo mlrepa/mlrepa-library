@@ -11,105 +11,136 @@ We will learn how to create a new Git repository, how to check the status of the
 
 ## 🎯**Goals**
 
-By the end of this tutorial, you will be able to:
+By the end of this module, you will be able to:
 
 - Create a new Git repository for your machine learning project
-- Check the status of your repository using `git status`
+- Check the status of your repository using the `git status`
 - Stage changes for commit using `git add`
 - Commit changes to the repository using `git commit`
 - View the commit history using `git log`
 
-
 ## **⚒️ Tutorial: Basic Git commands**
 
-### **1. Git - Basics**
+### **1. Create a Git repository**
 
 This example demonstrates the basics of using Git to create a repository and make changes to the code.
 
-  1. First, a new directory is created with the `mkdir` command, and the user navigates into the directory with `cd`. 
+First, create a new directory called `git-demo` using the `mkdir` command, and navigate into this directory using `cd`, all in one line.
 
-    ```bash
-    # Create a Git repo
-    mkdir git-demo && cd git-demo
-    ```
-2. Then, Git is initiated in the directory with the `git init` command.
+```bash
+# Create a Git repo
+mkdir git-demo && cd git-demo
+```
 
-    ```bash
-    # Initiate Git repo
-    git init 
-    ```
-3. Next, a new file called `file.txt` is created using the `touch` command, and the string "Hello Git!" is added to the file using the `echo` command. 
-The contents of the file are then printed to the console using the `cat` command.
+Then, initialize Git in the created directory using the `git init` command.
 
-    ```bash
-    # Update code: update 
-    touch file.txt 
-    echo "Hello Git!" >> file.txt
-    cat file.txt 
-    ```
-4. After making changes to the code, check the status of the Git repository with `git status`. Git recognises that a new file has been created and prompts the user to add the file to the staging area. 
-The file is added to the staging area with `git add`, and a commit message is added with `git commit -m` to save the changes to the repository.
+```bash
+# Initiate Git repo
+git init
+```
 
-    ```bash
-    # Check Git status and save updates
-    git status 
-    git add file.txt 
-    git commit -m "My first Git commit"
-    ```
-5. Finally, the user can view the Git history with **`git log`**, which displays a list of all the commits made to the repository, including the most recent commit with the commit message "My first Git commit".
+This command creates a new empty Git repository in the current directory.
+Additionally, `git init` automatically creates a hidden directory called `.git`. In this directory, there are:
 
-    ```bash
-    # View git history with `git log` 
-    git log
-    ```
+- staging area, a file with the information about the changes that will be included in the next commit,
+- metadata and object database of your project, including version snapshots.
 
-### **2.  Branching and merging**
+These components allow Git to keep track of changes, manage branches, and facilitate version control throughout the development process.
 
-Follow step by step tutorial to practice branching and merging
+### **2. Save (commit) changes**
 
-1. `git branch dev`: This command creates a new branch called "dev" within your Git repository. A branch in Git is essentially a snapshot of your code at a certain point in time that you can work on independently from other branches.
+Next, create a new file called `file.txt` using the `touch` command, and add the string "Hello Git!" using the `echo` command.
+Print the file content to the console using the `cat` command.
 
-    ```bash
-    # Create a branch
-    git branch dev
-    ```
-2. `git checkout dev`: 
-   This command switches you to the "dev" branch that you just created. Now any changes you make will be made to this branch instead of the main branch.
-    ```bash
-    # Checkout to a new branch
-    git checkout dev
-    ```
-3. `echo "My second commit" >> file.txt`: This command appends the string "My second commit" to the end of the file "file.txt". This is just an example change to demonstrate the concept of making changes to a branch.
-  
-    `cat file.txt`: This command simply prints out the contents of the file "file.txt" to the terminal.
+```bash
+# Create and change a file, print its content
+touch file.txt 
+echo "Hello Git" >> file.txt
+cat file.txt 
+```
 
-    `git add . && git commit -m "Update file.txt: add a new line"`: These two commands add any changes you've made to the "dev" branch to the staging area and then commit those changes to the branch with a message that describes the changes you made. 
+After making changes to the code, check the status of the Git repository with `git status`.
 
-    ```bash
-    # Update and commit
-    echo "My second commit" >> file.txt
-    cat file.txt 
-    git add . && git commit -m "Update file.txt: add a new line"
-    ```
-4 - `git checkout main`: This command switches you    back to the "main" branch.
+Git recognizes that you created a new file and prompts you to add the file to the staging area.
 
-    `cat file.txt`: This command prints out the contents of the file "file.txt" on the main branch. Notice that the changes you made on the "dev" branch are not reflected here yet.
+To add the file to the staging area use the `git add` command.
+Then, add a commit message with `git commit -m` to save the changes to the repository.
 
-    `git merge dev`: This command merges the changes you made on the "dev" branch into the "main" branch. Git will automatically attempt to merge the changes together, but if there are conflicts (e.g. you made changes to the same line of code on both branches), you'll need to manually resolve them. After the merge is complete, you'll see the changes you made on the "dev" branch reflected on the "main" branch.
+```bash
+# Check Git status and save updates
+git status 
+git add file.txt 
+git commit -m "My first Git commit"
+```
 
-    `cat file.txt`: This command prints out the contents of the file "file.txt" on the main branch again, now with the changes from the "dev" branch merged in.
+Finally, you can view the Git history with the `git log`, which displays a list of all the commits made to the repository, including the most recent commit with the commit message "My first Git commit".
 
-    ```bash
-    # Merge a `dev` branch to `main`
-    git checkout main 
-    cat file.txt
+```bash
+# View git history 
+git log  
+```
 
-    git merge dev
-    cat file.txt
-    ```
-<br>
+You may find it helpful to use the `--oneline` argument when viewing logs, as it provides a more compact representation of the commit history.
 
-If you still have questions about basic Git commands we can recommend you this video:
+!!! Note
+     To exit the `git log` viewing session, simply press the `q` key on your keyboard.
+
+### **3.  Branching**
+
+First, you need to create a new branch within your Git repository. A branch in Git is essentially a snapshot of your code at a certain point in time that you can work on independently from other branches. Use the `git branch dev` command to create a branch called 'dev'.
+
+```bash
+# Create a branch
+git branch dev
+```
+
+Then, switch to the "dev" branch that you just created using the `git checkout dev` command. Now any changes you make will be made to this branch instead of the main branch.
+
+Alternatively, you can create a branch and switch to it at once using the `git checkout -b dev` command.
+
+```bash
+# Checkout to a new branch
+git checkout dev
+
+# Create and checkout to a new branch
+git checkout -b dev
+```
+
+After switching to a new branch, let's make some changes. For example, append the string "My second commit" to the end of the file "file.txt" using the `echo "My second commit" >> file.txt` command. This is just an example of a change to demonstrate the concept of making changes to a branch.
+
+To check that you have made changes, use the `cat file.txt` command. This command simply prints out the contents of the 'file.txt' file to the terminal.
+
+The next important step is to add any changes you've made to the "dev" branch to the staging area and then commit those changes to the branch with a message that describes the changes you made. For this, use the `git add . && git commit -m "Update file.txt: add a new line"` command.
+
+```bash
+# Update and commit
+echo "My second commit" >> file.txt
+cat file.txt 
+git add . && git commit -m "Update file.txt: add a new line"
+```
+!!! Note
+     Remember that to merge changes from another branch into the main branch in Git, you need to be in the main branch.
+
+So, don’t forget to switch back to the "main" branch using the `git checkout main` command.
+
+To check that you have made changes, use the `cat file.txt` command. Notice that the changes you made on the "dev" branch are not reflected here yet.
+
+### **4. Merging**
+
+Merge the changes you made on the "dev" branch into the "main" branch using the `git merge dev` command. Git will automatically attempt to merge the changes together, but if there are conflicts (e.g., you made changes to the same line of code on both branches), you'll need to manually resolve them. After the merge is complete, you'll see the changes you made on the "dev" branch reflected on the "main" branch.
+
+And finally, print out the contents of the file "file.txt" on the main branch again with the `cat file.txt` command, now with the changes from the "dev" branch merged in.
+
+```bash
+# Merge a `dev` branch to `main`
+git checkout main 
+cat file.txt
+
+git merge dev
+cat file.txt
+```
+
+If you still have questions about basic Git commands we recommend you this video:
 
 <br>
 
@@ -118,14 +149,13 @@ If you still have questions about basic Git commands we can recommend you this v
   <figcaption>
     Git Tutorial for Beginners: Learn Git in 1 Hour
     </figcaption>
-</figure> 
-
+</figure>
 
 ## **🏁 Conclusion**
 
 Congratulations on completing this tutorial! 🥳 
 
-You have learned how to create a new Git repository, how to check the status of the repository, stage changes for commit, commit changes to the repository, and how to view the commit history. 
+You have learned how to create a new Git repository, how to check the status of the repository, stage changes for commit, commit changes to the repository, and how to view the commit history.
 
 See you soon!
 
@@ -133,6 +163,7 @@ See you soon!
 
 - **[Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE&list=RDLV2ReR1YJrNOM&index=4)** 
 - **[Git documentation](https://git-scm.com/doc)**
+- **[Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)**
 - **[Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)**
 
 !!! info " Contribute to the community! 🙏🏻 "
