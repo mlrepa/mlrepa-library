@@ -3,40 +3,38 @@
 
 # Git workflow: Remote
 
-## **👀 Overview**
-In this module, you will learn how to work with a remote repository using GitHub and GitLab (look at the tutorial). 
+## 👀 Overview
+In this module, you will learn how to work with a remote repository using GitLab.
 
 You will clone a remote repository, update your local repository and push changes to the remote. 
 
 Additionally, you will learn how to create a Merge Request to propose changes to the original repository.
 
-## **🎯 Goals**
-- Clone an existing repository from the remote.
-- Update the local repository with changes made on the remote repo.
-- Push changes from the local repository to the remote.
-- Create a Merge Request to propose changes to the original repository.
+## 🎯 Goals
+- Clone an existing repository from GitHub.
+- Update the local repository with changes made on GitLab.
+- Push changes from the local repository to GitLab.
 
 ## **⚒️ Tutorial: Work with the remote repository (GitLab)**
 
 ### **1. Create and clone a repository**
 
-For working with the remote repository, you need to clone a repo.
+To clone a repository means to download the files from the remote repository to your computer and to create a connection between them.
 
-!!! Note
-    To clone a repository means to download the files from the remote repository to your computer and create a connection between them.
+To clone a repository:
 
-1. Create an empty repository in your GitHub or GitLab account
-2. Copy the SSH URL of the created repository.
+1. Open a terminal and go to the directory where you want to clone the files
+2. Copy the Git SSH URL of the repository (REPO_URL)
+    <figure markdown>
+    ![Merging](images/repo-url.png){ width="400" height="100" }
+        <figcaption>
+        Copy the Git URL
+        </figcaption>
+    </figure>
 
-    === "GitHub"
-
-        ![Untitled](images/3-git-remote-clone_repo-GitHub.gif)
-
-    === "GitLab"
-
-        ![Untitled](images/3-git-remote-clone_repo-GitLab.gif)
-
-3. Clone the repository using the command `git clone` in the CLI.
+!!! note "Note"
+    REPO_URL : https://github.com/mlrepa/project-1-git
+3 - Сlone the repo using the command:
 
 ```bash
 git clone REPO_URL
@@ -71,10 +69,10 @@ touch config.yaml
 echo "repo: project-1-git" >> config.yaml
 cat config.yaml
 ```
-4. Also, we add and commit the changes to the local repository using
-
-```bash
-# Add and commit changes
+4. Also, we add and commit the changes to the local repository using `git add config.yaml && git commit -m "Add config.yaml"`.
+   
+```bash 
+# Commit changes
 git add config.yaml && git commit -m "Add config.yaml"
 ```
 5. Finally, we push our changes to the remote repository (named origin) in the ‘dev’ branch using the `git push origin dev` command. 
@@ -86,15 +84,7 @@ git push origin dev
 
 ### **3. Create a Merge Request: `dev` → `main`**
 
-Create a Merge Request via GitHub or GitLab  UI to the `main` branch
-
-=== "GitHub"
-
-    ![Untitled](images/3-git-remote-MR-GitHub.gif)
-
-=== "GitLab"
-
-    ![Untitled](images/3-git-remote-MR-GitLab.gif)
+- Create a Merge Request (via GitHub UI) to the `main` branch
 
 ## **🏁 Conclusion**
 
