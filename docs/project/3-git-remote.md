@@ -3,14 +3,14 @@
 
 # Git workflow: Remote
 
-## 👀 Overview
+## **👀 Overview**
 In this module, you will learn how to work with a remote repository using GitHub and GitLab (look at the tutorial). 
 
 You will clone a remote repository, update your local repository and push changes to the remote. 
 
 Additionally, you will learn how to create a Merge Request to propose changes to the original repository.
 
-## 🎯 Goals
+## **🎯 Goals**
 - Clone an existing repository from the remote.
 - Update the local repository with changes made on the remote repo.
 - Push changes from the local repository to the remote.
@@ -28,13 +28,14 @@ For working with the remote repository, you need to clone a repo.
 1. Create an empty repository in your GitHub or GitLab account
 2. Copy the SSH URL of the created repository.
 
-GitHub:
+    === "GitHub"
 
-![Untitled](images/3-git-remote-clone_repo-GitHub.gif)
+        ![Untitled](images/3-git-remote-clone_repo-GitHub.gif)
 
-GitLab:
+    === "GitLab"
 
-![Untitled](images/3-git-remote-clone_repo-GitHub.gif)
+        ![Untitled](images/3-git-remote-clone_repo-GitLab.gif)
+
 3. Clone the repository using the command `git clone` in the CLI.
 
 ```bash
@@ -71,7 +72,6 @@ echo "repo: project-1-git" >> config.yaml
 cat config.yaml
 ```
 4. Also, we add and commit the changes to the local repository using
- `git add config.yaml && git commit -m "Add config.yaml"`.
 
 ```bash
 # Add and commit changes
@@ -88,9 +88,13 @@ git push origin dev
 
 Create a Merge Request via GitHub or GitLab  UI to the `main` branch
 
-![Untitled](images/3-git-remote-MR-GitHub.gif)
+=== "GitHub"
 
-![Untitled](images/3-git-remote-MR-GitHub.gif)
+    ![Untitled](images/3-git-remote-MR-GitHub.gif)
+
+=== "GitLab"
+
+    ![Untitled](images/3-git-remote-MR-GitLab.gif)
 
 ## **🏁 Conclusion**
 

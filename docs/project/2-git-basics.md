@@ -161,7 +161,7 @@ See you soon!
 
 ## 🎓 **Additional Resources**
 
-- **[Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE&list=RDLV2ReR1YJrNOM&index=4)** 
+- **[Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE&list=RDLV2ReR1YJrNOM&index=5)** 
 - **[Git documentation](https://git-scm.com/doc)**
 - **[Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)**
 - **[Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)**
