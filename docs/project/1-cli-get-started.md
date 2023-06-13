@@ -4,49 +4,45 @@
 
 ## 👀 **Overview:**
 
-This module will introduce you to how to use CLI to manage files and directories. 
+This tutorial will introduce you to how to use CLI to manage files and directories. 
 
 We will cover the basic commands for navigating your file system, creating, editing, copying, renaming, moving, and deleting files and directories using the CLI.
 
 ## 🎯 **Goals**
 
-By the end of this module, you should be able to:
+By the end of this tutorial, you should be able to:
 
 - Understand the importance of using the CLI
-- Navigate your file system using the CLI
-- Create, edit, and delete files and directories using the CLI3
+- Navigate your file system using the CLI: create, edit, copy, rename, move, and delete files and directories
 
 ## ⚒️ **Tutorial: CLI - Get started**
 
 ### **1. Show files and directories**
 
-Let's show the current working directory with `pwd` command, 
+Let's start with `pwd` command. It stands for “print working directory”
 
-``` bash
+```bash
 # Show the current working directory 
 pwd
 ```
 
-``` bash
+…and then list the directory contents with `ls` command.
+
+```bash
 # List the dir content 
 ls
 ```
 
-To show the hidden files (files whose names begin with a dot `.`), use the option `-a` with the `ls` command. 
+The directory may have some hidden files. They are typically used to store configuration settings, preferences, etc. And hidden files aren’t intended to be directly accessed or modified by the user on a regular basis.
+
+With the command `ls -a`, you can list all files in a directory, including hidden files.
 
 ```bash
-# Show `hidden` files (whose names begin with a dot ‘.’)
+# Show all files including ‘hidden’ (whose names begin with a dot ‘.’) 
 ls -a 
 ```
 
-To get help on `ls` command, let's use the command `man ls`. Same works for other CLI commands. 
-
-``` bash
-# Show the command `Help`  (quit with `q` + Enter)
-man ls
-```
-
-To list files in the long format, use the option `-l` with the `ls` command. 
+To list files in the long format, use the `ls` command with the `-l` argument.  This command's output will include information about permissions, ownership, file size, date and time of last modification, and the file or directory name.
 
 ```bash
 # List files in the long format
@@ -60,58 +56,84 @@ To combine options, use `-la`.
 ls -la 
 ```
 
-Finally, to show the content of a file, use the `cat` command followed by the filename, such as `.hidden-file`.
+To get help on `ls` command, let's use the command `man ls`. Same works for other CLI commands. 
+
+If you need any clarification on the functionalities and options available for the `ls` command, use the command `man ls`. It stands for manual page. Same works for other CLI commands.
+
+To come back to the CLI, press the `q` button on the keyboard.
 
 ```bash
-# Show the content of the file
-cat .hidden-file
+# Show the command `Help`  (quit with `q` key)
+man ls
 ```
 
-### **2. Create files and directories**
+### **2. Create directories and files**
 
-To create a new `demo-cli` directory, you should use the `mkdir` command followed by the directory name. 
+To make a new directory in the current working directory, you should use the `mkdir` command followed by the directory name. For example, let’s create `demo-cli` directory.
 
 ```bash
-# Create a new `demo-cli` directory 
+# Make a new `demo-cli` directory 
 mkdir demo-cli
 ```
 
-Once the directory is created, you can navigate it using the `cd` command. 
+Once the directory is created, you can move into it using the `cd` command. It stands for “change directory”
 
 ```bash
-# Navigate to the `demo-cli` dir
+# Move into the `demo-cli` dir
 cd demo-cli
 ```
 
-After navigating to the `demo-cli` directory, you can create a new file named `file.txt` using the `vi` editor. 
+Sometimes you might need to create a new empty file.
+Let’s create a file named `file.txt` in the current directory with `touch file.txt` command.
 
 ```bash
-# Create a file with `vi/vim` or `touch` 
-touch file1.txt
-vi file2.txt
+# Create a new empty file in the working directory 
+touch file.txt
 ```
 
-!!! note "Note"
+### **3. Edit files with the `vi` / `vim` editor**
 
-    You may have another default editor on your system (like `nano` ). In this case, you may use it, and skip the next section.
+!!! Note
+     For this learning part, you need to use a text editor. You can use Vi or Vim text editors, which are built-in CLI.
+     
+     Also, you may use another default editor on your system (like `nano`). In this case, skip this section.
 
+Create a file
 
+```bash
+# Open a file for editing with `vi` 
+vi file.txt
 
-### 3. **Edit files with the `vi` / `vim` editor**
+# Open a file for editing with `vim` 
+vim file.txt
+```
 
-1. Create a file with `vim file.txt`
-2. (in vim editor) Press `i` to switch to insert mode and add the text:
-`This is the first line`
-3. (in vim editor) Close the file without saving: press `Esc`...
-    - type `:q` and press `Enter` , you get an expected error:
-    `E37: No write since last change (add ! to override)`
-    - type `:q!` and press [Enter], close the file without saving changes
-4. Open file with `vim file.txt` again and add the text:
-`This is the first line`
-5. Save results and close the file: press ++esc++, type `:wq`, press ++enter++
+To edit a file in vi /vim editor: 
 
+- Press `i` to switch to insert mode and add the text: `This is the first line`
 
-### 4. **Copy, rename, move, and delete files**
+In case you want to close the file without saving it: 
+
+- Press `Esc` button
+- Type a string `:q` (stands for ‘quit’) and press `Enter`, you will get an expected error:
+`E37: No write since last change (add ! to override)`
+- Add `!` mark, type a string `:q!` and press `Enter`, to close the file without saving changes
+
+If you want to save changes made in vi / vim editor:  
+
+- Open the file with `vi file.txt` again and add the text: `This is the first line`
+- Press `Esc` button
+- Type a string `:wq`
+- Press `Enter`
+
+Finally, to show the content of a file in CLI use the `cat` command with the file name, such as `file.txt`. This command stands for "concatenate." It means that `cat` command can read and display the contents of one or multiple files to the terminal.
+
+```bash
+# Show the content of the file in CLI
+cat file.txt
+```
+
+### **4. Copy, rename, move, and delete files**
 
 These code lines demonstrate how to copy, move, and delete files and directories using the command-line interface. Here are the steps:
 
@@ -151,17 +173,41 @@ rm file2.txt
 # Remove `demo-cli` dir
 rm -rf demo-cli
 ```
+### **5. Сheat sheet with commands**
+
+**CLI commands**
+
+| Command | Action |
+| --- | --- |
+| mkdir | Creates a new folder |
+| rm | Removes a file or directory |
+| cd | Changes to another location in your filesystem |
+| ls | Lists the files in the current directory |
+| pwd | Prints working directory |
+| cat | Prints in the current screen the content of a file |
+| mv | Moves or rename files |
+
+**Vi/Vim editor commands**
+
+| Command | Action |
+| --- | --- |
+| :i | Press i to switch to insert mode |
+| :w | After making changes to a file, press [Esc] to shift to the command mode and press :w and hit [Enter] to save a file. |
+| :q | To exit Vi/Vim, use the :q command and hit [Enter] |
+| :wq / :x | To save a file and exit Vi/Vim simultaneously, use the :wq command and hit [Enter] or :x command |
+| :q! | To force this action, use ESC and :q! |
 
 ## 🏁 **Conclusion**
 
-Congratulations on completing this module! 🥳 
+Congratulations on completing this tutorial! 🥳 
 By now, you should have a solid understanding of the importance of using the CLI in machine learning development and should be able to navigate your file system using CLI commands. You have also learned how to create, edit, and delete files and directories using the CLI.
 
 Keep practicing and honing your skills with the CLI, and don't hesitate to explore new commands and techniques. With time and practice, you will become a CLI expert! 🙌🏻
 
 ## 🎓 **Additional Resources**
 
-- [Unix Tutorial for Beginners](https://www.ee.surrey.ac.uk/Teaching/Unix/)
+- [Machine Learning REPA Library](https://mlrepa.github.io/mlrepa-library/)
+- [Unix Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 - [Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial)
 - [Introduction to the Unix Shell](https://swcarpentry.github.io/shell-novice/)
 

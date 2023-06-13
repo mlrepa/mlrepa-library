@@ -4,42 +4,44 @@
 
 ## **👀 Overview**
 
-This tutorial is designed to help you learn the GitHub workflow for contributing to an open-source project. 
+In this tutorial, we will explore the concept of repository forks and how they are used for contributing to open-source projects.
 
-The tutorial covers topics such as creating a fork of a project, adding a new remote to your Git repository, adding a .gitignore file, making a data directory visible in GitHub, and creating a Merge Request.
+In addition, you will practise forking, cloning, making changes and pushing them to your remote, creating Merge Requests. Also, you will have an opportunity to understand how to handle merge conflicts
 
 ## **🎯 Goals**
 
 By the end of this module, you will be able to:
 
-- Create a fork of an open-source project on GitHub.
-- Add a new remote to your Git repository to track the forked project.
-- Add a .gitignore file to exclude files and directories from version control.
-- Make a data directory visible in GitHub.
-- Create a Merge Request to submit your changes to the original project.
+- Understand the purpose and benefits of using repository forks in collaborative projects.
+- Learn the step-by-step workflow for using forks in open-source projects.
+- Practice forking a project and cloning the forked repository to your local machine.
+- Add your contributions to the forked project and create a Merge Request to propose changes to the original project.
+- Understand how to handle merge conflicts that may arise when collaborating with Git.
 
 ## **⚒️ Tutorial: Work with Repository Fork**
 
-Sometimes to contribute other project we need to use Forks. 
+Sometimes to contribute to other projects we need to use Forks. 
 
 Forking allows you to create a copy of an existing repository, including all its branches, commits, and history. This is useful if you want to experiment with the project, make changes, or add features without risking the original code.
 
-A typical workflow of using forks include following steps:
+A typical workflow for using forks in open-source projects includes the following steps:
 
 1. Fork an open-source project to create a copy of an existing project
 2. Clone the forked project to download and connect the files from the remote repository to your computer
 3. Create a branch for your changes 
-4. Add your changes, commit and push to the fork
-5. Create a Merge Request (MR) from your fork to the parent (original) project
+4. Add your changes, commit and push them to the fork
+5. Create a Merge Request (MR) from your fork to the parent (original) project 
 
-Let’s do it step by step.
+Let’s practise it step by step.
 
 ### **1. Fork a project**
 
-!!! note "Note"
-    REPO_URL : https://github.com/mlrepa/project-1-git
+For learning purposes in this tutorial, we will use the following remote repository:
 
-Create a fork for the REPO_URL by following steps:
+!!! Note
+    [https://github.com/mlrepa/mlrepa-library](https://github.com/mlrepa/mlrepa-library)
+
+First, you need to create a fork for the training repository by following the steps:
 
 - in the GitHub docs: [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 - in the GitLab docs: [Creating a fork](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html#creating-a-fork)
@@ -51,106 +53,56 @@ Create a fork for the REPO_URL by following steps:
 git clone FORK-REPO-URL
 ```
 
-### **3. Create a new `4-git-fork` branch**
+### **3. Add your contribution**
 
-```bash
-# Creat a new branch
-git branch -b 4-git-fork
-```
+For this exercise, you may choose one of the options below: 
 
-### **4. Add `.gitignore` and `data/` directory**
+1. Vote for the next tutorial topics in the Roadmap or suggest your own (section **[Roadmap](https://mlrepa.github.io/mlrepa-library/repa/roadmap/)**)
+2. Share the links to interesting open-source repositories of ML and AI projects that apply good engineering practices, meet [REPA principles](https://mlrepa.github.io/mlrepa-library/#repa-principles), and could be interesting to the ML REPA Community (section **[Projects](https://mlrepa.github.io/mlrepa-library/resources/projects/))**.
+3. Share the links to useful resources such as tutorials, posts, or papers (section [**Resources**](https://mlrepa.github.io/mlrepa-library/resources/resources/))
 
-When working on a project, you may generate files or folders that are not necessary to include in version control, such as temporary files or log files. These files can clutter your repository and make it harder to manage.
+<br>
 
-So, `.gitignore` file allows you to specify files and directories that Git should ignore when committing changes.
+**Guide:**
 
-Add `.gitignore` (use with VScode IDE)
+To add your contributon you need to
 
-- press `CTRL + Shift + P` (`CMD + Shift + P` on macOS) to open the command palette.
-- type in `Add gitignore` in the command palette.
-- Update code & commit
+1. Create and switch to the branch `4-git-fork`
+2. Add your updates to
+      - Roadmap: docs/repa/roadmap.md
+      - Project: docs/resources/projects.md
+      - Resources: docs/resources/resources.md
+3. Push updates to your fork 
 
-Example shows how to create an empty data/ directory, add file.txt to it, ignore `data/` in the `.gitignore`, and commit & push the 4-git-fork branch to GitHub.
-Let’s dive in!
+### **4. Create a Merge Request**
 
-1. `mkdir data` creates a new empty directory called `data`.
+- Create a Merge Request (via GitHub UI) to the `main` branch in the parent repository
 
-```bash
-# Create an empty `data/` directory
-mkdir data
-```
-2. `touch data/file.txt` creates a new file called `file.txt` in the `data` directory.
+### **5. Resolving Conflicts**
 
-```bash
-# Create a `file.txt` in `data` dir
-touch data/file.txt
-```
-3. `echo "data" >> .gitignore` adds the `data/` directory to the `.gitignore` file.
+When you collaborate with Git, you may often run into merge conflicts. Conflicts can arise when multiple contributors make conflicting changes to the same file. 
 
-```bash
-# Add to `.gitignore` but make it visible in the Git repo
-echo "data" >> .gitignore
-```
-4. `git add .gitignore && commit -m "Add .gitignore and data/ directory"` stages the `.gitignore` file and commits the changes with the message "Add .gitignore and data/ directory".
+Fortunately, tools like VS Code can help you identify and resolve these conflicts by highlighting the differences and providing options to accept specific changes. Once resolved, you can stag the conflicting file and commit it to ensure a smooth collaboration process.
 
-`git push myfork 4-git-fork` pushes the changes to the `4-git-fork` branch on the user fork on GitHub.
+Please, take a look at the **"Helpful Guide to Merge Conflicts”** video by the VSCode team. The video:
 
-```bash
-# Commit & push `4-git-fork` branch to GitHub (to user fork)
-git add .gitignore && commit -m "Add `.gitignore` and `data/` directory"
-git push myfork 4-git-fork
-```
+- explains why you may get merge conflicts
+- shows an approach how to resolve conflicts in VSCode IDE
 
-Expected results:
-
-- there is no `file.txt` added to Git history
-- there is no `data` directory in GitHub (forked repo)
-
-### **5. Update: make `data/` directory visible in GitHub**
-
-If you have a data directory that contains large files, such as datasets or trained models, Git may not show them by default. This can cause issues if you need to share or collaborate on the project.
-
-Making the data directory visible in GitHub ensures that the files are accessible to other team members.
-
-The next stage is to make the previously ignored `data/` directory visible in GitHub. 
-Look closer!
-
-1. First, create a `.gitignore` file in the `data/` directory,
-
-```bash
-# Create `data/.gititnore`
-touch data/.gititnore
-```
-2. add it to Git using force mode, 
-
-```bash
-# Add `data/.gititnore` to Git (force mode)
-git add data/.gitignore -f
-```
-3. then commit and push the updates to the user's fork. 
-
-```bash
-# Commit & push updates
-git add .gitignore && commit -m "Make `data/` empty but visible"
-git push myfork 4-git-fork
-```
-4. Finally, delete the `4-git-fork`
- branch in the local repository.
-
-```bash
-# Delete `4-git-fork` branch in the local repo
-git branch -d 4-git-fork
-```
-
-### **6. Create a Merge Request**
-
-- Create a Merge Request (via GitHub UI) to the `main` branch in the parent repository (REPO_URL)
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/HosPml1qkrg" frameborder="0" width="600" height="300" allowfullscreen="true" "Image Title" > </iframe>
+  <figcaption>
+    Helpful Guide to Merge Conflicts
+    </figcaption>
+</figure> 
 
 ## **🏁 Conclusion**
 
 Congratulations on completing this tutorial! 🥳 
 
-In this tutorial, you learned the GitHub workflow for contributing to an open-source project. The topics covered included creating a fork of a project, adding a new remote to your Git repository, adding a .gitignore file, making a data directory visible in GitHub, and creating a Merge Request.
+You learned about the importance of repository forks for contributing to open-source projects. You explored the step-by-step process of forking a project, cloning the forked repository to your local machine, making changes, pushing them to the remote fork, and making Merge Requests.
+
+You also have known how to handle merge conflicts. Good job!
 
 ## **🎓 Additional Resources**
 

@@ -3,95 +3,106 @@
 
 # Git workflow: Remote
 
-## 👀 Overview
-In this module, you will learn how to work with a remote repository using GitLab.
+## **👀 Overview**
+In this module, you will learn how to work with a remote repository using GitHub and GitLab (look at the tutorial). 
 
-You will clone a remote repository, update your local repository and push changes to the remote.
+You will clone a remote repository, update your local repository and push changes to the remote. 
 
+Additionally, you will learn how to create a Merge Request to propose changes to the original repository.
 
-## 🎯 Goals
-- Clone an existing repository from GitHub.
-- Update the local repository with changes made on GitLab.
-- Push changes from the local repository to GitLab.
+## **🎯 Goals**
+- Clone an existing repository from the remote.
+- Update the local repository with changes made on the remote repo.
+- Push changes from the local repository to the remote.
+- Create a Merge Request to propose changes to the original repository.
 
 ## **⚒️ Tutorial: Work with the remote repository (GitLab)**
 
-### **1. Clone a repository**
+### **1. Create and clone a repository**
 
-To clone a repository means to download the files from the remote repository to your computer and to create a connection between them.
+For working with the remote repository, you need to clone a repo.
 
-To clone a repository:
+!!! Note
+    To clone a repository means to download the files from the remote repository to your computer and create a connection between them.
 
-1. Open a terminal and go to the directory where you want to clone the files
-2. Copy the Git SSH URL of the repository (REPO_URL)
-    <figure markdown>
-    ![Merging](images/repo-url.png){ width="400" height="100" }
-        <figcaption>
-        Copy the Git URL
-        </figcaption>
-    </figure>
+1. Create an empty repository in your GitHub or GitLab account
+2. Copy the SSH URL of the created repository.
 
-!!! note "Note"
-    REPO_URL : https://github.com/mlrepa/project-1-git
-3 - Сlone the repo using the command:
+    === "GitHub"
 
-```bash 
-git clone REPO_URL 
+        ![Untitled](images/3-git-remote-clone_repo-GitHub.gif)
+
+    === "GitLab"
+
+        ![Untitled](images/3-git-remote-clone_repo-GitLab.gif)
+
+3. Clone the repository using the command `git clone` in the CLI.
+
+```bash
+git clone REPO_URL
 ```
 
-!!! note "Note"
+!!! Note
+        Git automatically creates a folder with the repository name and downloads the files there.
 
-    Git automatically creates a folder with the repository name and downloads the files there.
+### **2. Create and Update `dev` branch, push it to the remote**
 
+Now let’s see how to work with a remote repository using GitHub. 
 
+1. First, we navigate to our **3-git-remote** directory using the command `cd 3-git-remote`.
 
-### **2. Update and push to remote**
-
-Let’s see how to work with a remote repository using GitLab.
-
-1. First, we navigate to our project-1-git directory using the command `cd project-1-git`.
-   
-```bash 
+```bash
 # Go to the repository 
-cd project-1-git 
+cd 3-git-remote
 ```
-2. Then, we create a new branch called `dev`. By this way you can make changes without affecting the main codebase. And we switch to new branch with the command `git checkout -b dev`.
-   
-```bash 
-# Create `dev` branch and checkout to it
+2. Then, we need to create a new branch called `dev`. In this way, you can make changes without affecting the main codebase.
+And we immediately switch to a new branch with the command `git checkout -b dev`.
+
+```bash
+# Create `dev` branch and checkout to it (-b flag)
 git checkout -b dev
 ```
-3. Next, we create a new file called `config.yaml` using the `touch` command and add a line to it using `echo "repo: project-1-git" >> config.yaml`. We confirm the changes using `cat config.yaml`.
- 
-```bash 
-#Create a config file 
+3. Next, we create a new file called `config.yaml` using the `touch` command and add a line to it using `echo "repo: project-1-git" >> config.yaml`. 
+We confirm the changes using `cat config.yaml`.  This command will print the file’s content.
+
+```bash
+# Create a config file, make changes, confirm them
 touch config.yaml 
 echo "repo: project-1-git" >> config.yaml
 cat config.yaml
 ```
-4. Also, we add and commit the changes to the local repository using `git add config.yaml && git commit -m "Add config.yaml"`.
-   
-```bash 
-# Commit changes
+4. Also, we add and commit the changes to the local repository using
+
+```bash
+# Add and commit changes
 git add config.yaml && git commit -m "Add config.yaml"
 ```
-5. Finally, we push our changes to the remote repository on GitLab using `git push origin dev`. This will create a new branch on the remote repository with the changes we've made in our local repository.
-```bash 
-# Push to GitLab 
+5. Finally, we push our changes to the remote repository (named origin) in the ‘dev’ branch using the `git push origin dev` command. 
+
+```bash
+# Push changes to the remote repository
 git push origin dev
-``` 
+```
 
-### **3. Create a Merge Request**
+### **3. Create a Merge Request: `dev` → `main`**
 
-- Create a Merge Request (via GitHub UI) to the `main` branch
+Create a Merge Request via GitHub or GitLab  UI to the `main` branch
 
-## 🏁 Conclusion
+=== "GitHub"
+
+    ![Untitled](images/3-git-remote-MR-GitHub.gif)
+
+=== "GitLab"
+
+    ![Untitled](images/3-git-remote-MR-GitLab.gif)
+
+## **🏁 Conclusion**
 
 Congratulations on completing this tutorial! 🥳
 
-You have learned how to work with a remote repository using GitLab. You cloned a remote repository, updated your local repository, and pushed changes to the remote.
+You have learned how to work with a remote repository. You set up SSH to connect to GitHub / GitLab, cloned a remote repository, updated your local repository, and pushed changes to the remote.
 
-See you in the next tutorial!
+Furthermore, you learned how to create a Merge Request to propose changes to the original repository.
 
 ## **🎓 Additional Resources:**
 
@@ -100,6 +111,7 @@ See you in the next tutorial!
 - [GitLab tutorials](https://docs.gitlab.com/ee/gitlab-basics/)
 - [Git documentation](https://git-scm.com/doc)
 - [GitHub Git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
+- [Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 !!! info " Contribute to the community! 🙏🏻 "
 
