@@ -133,7 +133,7 @@ Finally, to show the content of a file in CLI use the `cat` command with the fil
 cat file.txt
 ```
 
-### **4. Copy, rename, move, and delete files**
+### **4. Copy, move, and delete files**
 
 These code lines demonstrate how to copy, move, and delete files and directories using the command-line interface. Here are the steps:
 
