@@ -79,8 +79,6 @@ markdown_extensions:
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - awesome-pages:
-      filename: .pages
   - social
   - tags
 
