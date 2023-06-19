@@ -117,6 +117,7 @@ nav:
       - Docker: project/project-4-docker.md
    
     - DVC:
+      - dvc/index.md
       - Get Started with DVC: dvc/dvc-1-get-started.md
       - Data Versioning with DVC: dvc/dvc-2-data-versioning.md
       - Automate ML experiments with DVC: dvc/dvc-3-automate-experiments.md

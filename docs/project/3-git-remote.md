@@ -20,21 +20,30 @@ Additionally, you will learn how to create a Merge Request to propose changes to
 
 ### **1. Create and clone a repository**
 
-For working with the remote repository, you need to clone a repo.
+To clone a repository means to download the files from the remote repository to your computer and to create a connection between them.
 
-!!! Note
-    To clone a repository means to download the files from the remote repository to your computer and create a connection between them.
+To clone a repository:
 
-1. Create an empty repository in your GitHub or GitLab account
-2. Copy the SSH URL of the created repository.
+1. Open a terminal and go to the directory where you want to clone the files
+2. Copy the Git SSH URL of the repository (REPO_URL)
+    <figure markdown>
+    ![Merging](images/repo-url.png){ width="400" height="100" }
+        <figcaption>
+        Copy the Git URL
+        </figcaption>
+    </figure>
 
     === "GitHub"
 
-        ![Untitled](images/3-git-remote-clone_repo-GitHub.gif)
+        <figure class="video_container">
+        <iframe src="https://www.youtube.com/embed/_mToI5_BQtM" frameborder="0" width="700" height="400" allowfullscreen="true" "Image Title"> </iframe>
+        </figure>
 
-    === "GitLab"
+    === "GitLab" 
 
-        ![Untitled](images/3-git-remote-clone_repo-GitLab.gif)
+        <figure class="video_container">
+        <iframe src="https://www.youtube.com/embed/p1LbpTmDdWE" frameborder="0" width="700" height="400" allowfullscreen="true" "Image Title"> </iframe>
+        </figure>
 
 3. Clone the repository using the command `git clone` in the CLI.
 
@@ -90,11 +99,15 @@ Create a Merge Request via GitHub or GitLab  UI to the `main` branch
 
 === "GitHub"
 
-    ![Untitled](images/3-git-remote-MR-GitHub.gif)
+    <figure class="video_container">
+        <iframe src="https://www.youtube.com/embed/H1FOglK1mQo" frameborder="0" width="700" height="400" allowfullscreen="true" "Image Title"> </iframe>
+        </figure>
 
 === "GitLab"
 
-    ![Untitled](images/3-git-remote-MR-GitLab.gif)
+    <figure class="video_container">
+        <iframe src="https://www.youtube.com/embed/-r0GnzbkSAg" frameborder="0" width="700" height="400" allowfullscreen="true" "Image Title"> </iframe>
+        </figure>
 
 ## **🏁 Conclusion**
 
