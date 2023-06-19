@@ -151,3 +151,8 @@ nav:
   - Resources:
     - Projects: resources/projects.md
     - Resources: resources/resources.md
+
+  # HIDDEN PAGES - DO NOT UNCOMMENT
+  # - School: 
+  #   - git-101: school/git-101-assignment-1.md
+
