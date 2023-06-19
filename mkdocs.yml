@@ -79,6 +79,8 @@ markdown_extensions:
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - awesome-pages:
+      filename: .pages
   - social
   - tags
 
@@ -151,3 +153,8 @@ nav:
   - Resources:
     - Projects: resources/projects.md
     - Resources: resources/resources.md
+
+  # HIDDEN PAGES - DO NOT UNCOMMENT
+  # - School: 
+  #   - git-101: school/git-101-assignment-1.md
+

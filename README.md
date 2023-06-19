@@ -6,31 +6,17 @@ Welcome to the ML REPA Library, your go-to resource for MLOps and ML Engineering
 We're committed to empowering the ML community with the tools and knowledge necessary to tackle even the most challenging ML projects. Join us in our mission to advance the field of ML and build a community of successful and skilled ML practitioners.
 
 
-## :woman_technologist: Installation
+**🚀 Let's build it together!**
 
-### 1. Fork / Clone this repository
+You may help the community in multiple ways! You support is highly appreciated! 🙏🏻
+ 
+- ⭐ **Put a star on our [ML REPA library repository](https://github.com/mlrepa/mlrepa-library)** on GitHub 
+- 📣 **Share our tutorials** with friends and colleagues! 
+- ✅ **Fill out the [Feedback Form](https://forms.gle/Yc9DmampbwFpEzo58)**
+We would appreciate any suggestions or comments you may have
+- ✍️ **Join us to write tutorials**! If you have a tutorial or just an idea, please feel free to create a [GitHub issue](https://github.com/mlrepa/mlrepa-library/issues) with your suggestion. We will get back to you as soon as possible.
 
-Get the evidently code example:
-
-```bash
-git clone https://github.com/mlrepa/mlrepa-library.git 
-```
-
-### 2. Create virtual environment
-
-Create virtual environment named `.venv` and install python libraries
-
-```bash
-python3 -m venv .venv
-echo "export PYTHONPATH=$PWD" >> .venv/bin/activate
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-# 🚀 Your Feedback is Important to the Community!
-We hope you enjoyed the tutorial and learned a lot of useful techniques. Your feedback is important and helps us improve and create better learning experiences for the whole community.
-
-Thank you for taking the time to share your thoughts with us! 👍
+Thank you for taking the time to help the community! 👍
 
 # 
 ![banner](docs/static/footer.png)
