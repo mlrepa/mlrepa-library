@@ -1,0 +1,1458 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This library is dedicated to providing the most up-to-date and relevant information, tutorials, and solutions to help you succeed in your machine learning projects.">
+      
+      
+        <meta name="author" content="Mikhail Rozhkov">
+      
+      
+        <link rel="canonical" href="https://mlrepa.github.io/mlrepa-library/school/git-101-assignment-1/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+    
+    
+      
+        <title>Assignment 1: Setting up a Git Repository for an ML Project in GitLab - ML REPA Library: MLOps and ML Engineering Solutions for Success</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Assignment 1: Setting up a Git Repository for an ML Project in GitLab - ML REPA Library: MLOps and ML Engineering Solutions for Success" >
+      
+        <meta  property="og:description"  content="This library is dedicated to providing the most up-to-date and relevant information, tutorials, and solutions to help you succeed in your machine learning projects." >
+      
+        <meta  property="og:image"  content="https://mlrepa.github.io/mlrepa-library/assets/images/social/school/git-101-assignment-1.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://mlrepa.github.io/mlrepa-library/school/git-101-assignment-1/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Assignment 1: Setting up a Git Repository for an ML Project in GitLab - ML REPA Library: MLOps and ML Engineering Solutions for Success" >
+      
+        <meta  name="twitter:description"  content="This library is dedicated to providing the most up-to-date and relevant information, tutorials, and solutions to help you succeed in your machine learning projects." >
+      
+        <meta  name="twitter:image"  content="https://mlrepa.github.io/mlrepa-library/assets/images/social/school/git-101-assignment-1.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-1-setting-up-a-git-repository-for-an-ml-project-in-gitlab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ML REPA Library: MLOps and ML Engineering Solutions for Success" class="md-header__button md-logo" aria-label="ML REPA Library: MLOps and ML Engineering Solutions for Success" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ML REPA Library: MLOps and ML Engineering Solutions for Success
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assignment 1: Setting up a Git Repository for an ML Project in GitLab
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mlrepa/mlrepa-library" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ML REPA Library
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        ML REPA
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../project/" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mlops/" class="md-tabs__link">
+        Production ML and MLOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/projects/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ML REPA Library: MLOps and ML Engineering Solutions for Success" class="md-nav__button md-logo" aria-label="ML REPA Library: MLOps and ML Engineering Solutions for Success" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    ML REPA Library: MLOps and ML Engineering Solutions for Success
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mlrepa/mlrepa-library" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ML REPA Library
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">ML REPA</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          ML REPA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/contribution-guide/" class="md-nav__link">
+        Contributors Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/author-guide/" class="md-nav__link">
+        Author Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repa/roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../project/">Get Started</a>
+          
+            <label for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Get Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/1-cli-get-started/" class="md-nav__link">
+        Command Line Interface (CLI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/1-git-get-started/" class="md-nav__link">
+        Get started with Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/2-git-basics/" class="md-nav__link">
+        Basic Git commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/3-git-remote/" class="md-nav__link">
+        Git workflow - Remote
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/4-git-fork/" class="md-nav__link">
+        Git workflow - Fork
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/project-2-virtualenv/" class="md-nav__link">
+        Virtual Environments and Package Managers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/project-4-docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../dvc/">DVC</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          DVC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dvc/dvc-1-get-started/" class="md-nav__link">
+        Get Started with DVC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dvc/dvc-2-data-versioning/" class="md-nav__link">
+        Data Versioning with DVC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dvc/dvc-3-automate-experiments/" class="md-nav__link">
+        Automate ML experiments with DVC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mlops/">Production ML and MLOps</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Production ML and MLOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mlops/mlops-0-overview/" class="md-nav__link">
+        Intro to Production ML and MLOps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mlops/mlops-1-system-architecture/" class="md-nav__link">
+        ML Systems Architecture Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mlops/mlops-2-api-frameworks/" class="md-nav__link">
+        Web Services, Frameworks, APIs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/projects/" class="md-nav__link">
+        Projects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    👀 Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    🎯Goals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    👩🏻‍💻 Assignment
+  </a>
+  
+    <nav class="md-nav" aria-label="👩🏻‍💻 Assignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clone-the-repository" class="md-nav__link">
+    1. Clone the Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-new-branch-assignment" class="md-nav__link">
+    2. Create a New Branch: assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-the-data-directory" class="md-nav__link">
+    3. Add the  data/ Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-add-models-directory" class="md-nav__link">
+    4. Add models/ directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-add-reports-directory" class="md-nav__link">
+    5. Add reports/ directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-add-notebooks-directory" class="md-nav__link">
+    6. Add notebooks/ directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-add-the-requirementstxt-file" class="md-nav__link">
+    7. Add the requirements.txt file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-add-the-configyaml-file" class="md-nav__link">
+    8.  Add the config.yaml file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-optional-update-the-readmemd-file" class="md-nav__link">
+    9. (optional) Update the README.md file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-commit-and-push-updates-to-the-assignment-branch-on-gitlab" class="md-nav__link">
+    10. Commit and Push Updates to the assignment Branch on GitLab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-heck-the-requirements-to-the-assignment" class="md-nav__link">
+    11. Сheck the Requirements to the assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-submission-create-a-merge-request-to-the-main-branch" class="md-nav__link">
+    12. Submission: Create a Merge Request to the main Branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    Pro Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Pro Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-use-and-share-the-template" class="md-nav__link">
+    1. Use and share the template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-vscode-ide-to-generate-gitignore-files" class="md-nav__link">
+    2. Use VSCode IDE to generate .gitignore files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<h1 id="assignment-1-setting-up-a-git-repository-for-an-ml-project-in-gitlab">Assignment 1: Setting up a Git Repository for an ML Project in GitLab<a class="headerlink" href="#assignment-1-setting-up-a-git-repository-for-an-ml-project-in-gitlab" title="Permanent link">&para;</a></h1>
+<h2 id="overview">👀 <strong>Overview</strong><a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This assignment is designed to provide hands-on practice with basic CLI, Git commands <strong>and GitLab.</strong> Throughout this assignment, you will clone a template repository and customize it to suit ML/AI projects.</p>
+<p>By the end of the assignment, you will have created a template repository similar to the one generated by <strong><a href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter Data Science</a></strong>. This repository can be reused as a template for your future projects.</p>
+<p>We will be using GitLab for this assignment.</p>
+<h2 id="goals">🎯<strong>Goals</strong><a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
+<p>Upon completing this assignment, you will be able to:</p>
+<ul>
+<li>Effectively utilize Git commands</li>
+<li>Practice collaborative workflows using Git and Merge Requests</li>
+<li>Create a template repository for ML projects</li>
+<li>Gain hands-on experience with GitLab</li>
+</ul>
+<p>Let's dive in and start setting up your Git repository!</p>
+<h2 id="requirements"><strong>Requirements</strong><a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>To ensure the successful completion of the assignment, please make sure the following requirements are met:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The source branch name for the Merge Request is <code>assignment</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>data/</code> directory in GitLab only contains a <code>.gitignore</code> file  (files added here are <strong>NOT</strong> tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>models/</code> directory in GitLab has an empty <code>.gitignore</code> file (files added here are tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>reports/</code> directory in GitLab has an empty <code>.gitignore</code> (files added here are tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>notebooks/</code> directory in GitLab only contains a <code>.gitignore</code> (files added here are <strong>NOT</strong> tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The root of your repository contains an empty <code>config.yaml</code> file.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <em>(optional)</em> The README.md file has been updated to provide an overview of the repository, including details about its purpose, structure, and usage instructions.</li>
+</ul>
+<p>Good luck with your submission! 🙌🏻</p>
+<h2 id="assignment">👩🏻‍💻 <strong>Assignment</strong><a class="headerlink" href="#assignment" title="Permanent link">&para;</a></h2>
+<h3 id="1-clone-the-repository"><strong>1. Clone the Repository</strong><a class="headerlink" href="#1-clone-the-repository" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>💡 Please, find the <code>project-1-git</code>repository in your workspace in the GitLab MLREPA Group.</p>
+</div>
+<p>Please clone this repository with the SSH URL to your local machine.</p>
+<h3 id="2-create-a-new-branch-assignment"><strong>2. Create a New Branch: <code>assignment</code></strong><a class="headerlink" href="#2-create-a-new-branch-assignment" title="Permanent link">&para;</a></h3>
+<p>Navigate to the cloned repository and create a new branch there named <code>assignment</code> and switch to it using the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Create a new branch and switch to it</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>assignment
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>💡 It’s important to name the branch name exactly as an <code>assignment</code>.
+Other names or typos will affect the assessment results.</p>
+</div>
+<h3 id="3-add-the-data-directory"><strong>3. Add the  <code>data/</code> Directory</strong><a class="headerlink" href="#3-add-the-data-directory" title="Permanent link">&para;</a></h3>
+<p>In the process of working on your project, you may come across files or folders that are not meant to be included in Git version control, such as temporary files or large data files. These files can clutter your repository and make it more difficult to manage.</p>
+<p>To address this, Git uses a <code>.gitignore</code> file to specify files and directories that should be ignored when committing changes.
+Let's try it!</p>
+<p><strong>Sub-task 1: Add the <code>data/</code> Directory and Exclude its Contents from Version Control</strong></p>
+<p>First, inside your new <code>assignment</code> branch create an empty directory named <code>data/</code> with this command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>data
+</span></code></pre></div>
+<p>Next, create a <code>.gitignore</code> file in the root of your repository:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>touch<span class="w"> </span>.gitignore
+</span></code></pre></div>
+<p>Update the <code>.gitignore</code> file to exclude the contents of the whole <code>data/</code> directory.</p>
+<p>The asterisk (*) is a wildcard character that represents any file in the specified location.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Add the following line</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>data/*
+</span></code></pre></div>
+<p>Commit your updates and push them in the remote repository</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>add<span class="w"> </span>.gitignore
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add .gitignore file&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>assignment
+</span></code></pre></div>
+<p>Note, at this point Git doesn’t track any files in the <code>data/</code> directory.</p>
+<p>You can test this by creating a new file inside the <code>data/</code> directory and running the <code>git status</code> command. The output should not show any changes in the repository.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Creating a file in untracked directory</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>touch<span class="w"> </span>data/file.txt<span class="w"> </span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Git Status command shouldn&#39;t show any changes in the repo</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>git<span class="w"> </span>status<span class="w"> </span>
+</span></code></pre></div>
+<p>However, if you check the remote repository on GitLab, you will notice that the <code>data/</code> directory is not present. This can become problematic if your colleagues clone your repository and expect the <code>data/</code> directory to be present.</p>
+<p>It is a good practice to keep the repository structure consistent between your local and remote repositories.
+Let's address this issue!</p>
+<p><strong>Sub-task 2: Make <code>data/</code> directory visible in GitLab remote</strong></p>
+<p>To make the <code>data/</code> directory visible in the GitLab remote repository without versioning all files inside it, we can create a hidden file inside the directory and instruct Git to track only that single file.</p>
+<p>First, let's create an empty <code>.gitignore</code> file in the <code>data/</code> directory:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Create &quot;.gitignore&quot; file in &quot;data/&quot; directory</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>touch<span class="w"> </span>data/.gitignore
+</span></code></pre></div>
+<p>Next, add <code>data/.gitignore</code> to Git by appending the following line to the file:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;!.gitignore&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>data/.gitignore
+</span></code></pre></div>
+<p>Then, add <code>data/.gitignore</code> to Git using the force mode. </p>
+<p>By using the <code>-f</code> flag, you're instructing Git to forcefully add the <code>.gitignore</code> file to the staging area, regardless of any ignore rules defined.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>add<span class="w"> </span>data/.gitignore<span class="w"> </span>-f
+</span></code></pre></div>
+<p>Commit and push the updates to the remote repository:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add `data/.gitignore` file&quot;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>assignment
+</span></code></pre></div>
+<p>By following these steps, you will achieve the following expected results:</p>
+<ul>
+<li>The <code>file.txt</code> inside the <code>data/</code> directory will not be added to the Git history.</li>
+<li>The <code>data/</code> directory will be visible in the GitLab remote repository.</li>
+</ul>
+<p>This approach allows you to exclude specific files from version control while still making the directory itself visible in the remote repository. It helps maintain consistency between your local and remote repositories and ensures that your colleagues can access and use the necessary directory structure for your ML project.</p>
+<h3 id="4-add-models-directory"><strong>4. Add <code>models/</code> directory</strong><a class="headerlink" href="#4-add-models-directory" title="Permanent link">&para;</a></h3>
+<p>The <code>models/</code> directory is used to store trained and serialized models. To add this directory to the repository and track its content with Git, please complete the following tasks:</p>
+<p><strong>TODO:</strong> </p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Add the <code>models/</code> directory to the repository.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create a <code>.gitignore</code> file inside the <code>models/</code> directory</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Ensure that the content within the <code>models/</code> directory is tracked by Git.</li>
+</ul>
+<h3 id="5-add-reports-directory"><strong>5. Add <code>reports/</code> directory</strong><a class="headerlink" href="#5-add-reports-directory" title="Permanent link">&para;</a></h3>
+<p>The <code>reports/</code> directory is intended for storing metrics, generated graphics, and figures used for reporting purposes. To complete the task, follow these steps:</p>
+<p><strong>TODO:</strong> </p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Add the <code>reports/</code> directory to the repository.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create a <code>.gitignore</code> file inside the <code>reports/</code> directory</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Ensure that the content within the <code>reports/</code> directory is tracked by Git.</li>
+</ul>
+<h3 id="6-add-notebooks-directory"><strong>6. Add <code>notebooks/</code> directory</strong><a class="headerlink" href="#6-add-notebooks-directory" title="Permanent link">&para;</a></h3>
+<p>The <code>notebooks/</code> directory is used for storing Jupyter Notebook files, often utilized for prototyping purposes. To follow best practices, we should exclude these files from being tracked by Git.</p>
+<p><strong>TODO:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Add the <code>notebooks/</code> directory to the repository.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Exclude the contents of the whole <code>notebooks/</code> directory. 
+For this update the <code>.gitignore</code> file in the root of your repository</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> But make <code>notebooks**/</code>** directory visible in GitLab remote. To do this you should</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> create a <code>.gitignore</code> file inside the <code>notebooks/</code> directory.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> append the same following line to the .gitignore file:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;!.gitignore&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>notebooks/.gitignore
+</span></code></pre></div>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Ensure that the content within the <code>notebooks/</code> directory is not tracked by Git.</p>
+</li>
+</ul>
+<h3 id="7-add-the-requirementstxt-file"><strong>7. Add the <code>requirements.txt</code> file</strong><a class="headerlink" href="#7-add-the-requirementstxt-file" title="Permanent link">&para;</a></h3>
+<p>It is considered good practice to list all the Python dependencies required for the project in a <code>requirements.txt</code> file. For this template, we will add an empty file.</p>
+<p><strong>TODO:</strong> </p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Add an empty <code>requirements.txt</code> file to the “project-1-git” repository.</li>
+</ul>
+<h3 id="8-add-the-configyaml-file"><strong>8.  Add the <code>config.yaml</code> file</strong><a class="headerlink" href="#8-add-the-configyaml-file" title="Permanent link">&para;</a></h3>
+<p>Add the <code>config.yaml</code> file in the root of your repository. 
+The <code>config.yaml</code> file is used to store configuration settings and parameters for a particular application or system.</p>
+<p>For now <code>config.yaml</code> file will remain empty. </p>
+<h3 id="9-optional-update-the-readmemd-file"><strong>9. <em>(optional)</em> Update the <code>README.md</code> file</strong><a class="headerlink" href="#9-optional-update-the-readmemd-file" title="Permanent link">&para;</a></h3>
+<p>It is recommended to have a <code>README.md</code> file that provides an overview of the repository, including details about its purpose, structure, and instructions for usage.</p>
+<p><strong>To do</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create the<code>README.md</code> file</li>
+</ul>
+<h3 id="10-commit-and-push-updates-to-the-assignment-branch-on-gitlab"><strong>10. Commit and Push Updates to the <code>assignment</code> Branch on GitLab</strong><a class="headerlink" href="#10-commit-and-push-updates-to-the-assignment-branch-on-gitlab" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>assignment
+</span></code></pre></div>
+<h3 id="11-heck-the-requirements-to-the-assignment"><strong>11. Сheck the Requirements to the assignment</strong><a class="headerlink" href="#11-heck-the-requirements-to-the-assignment" title="Permanent link">&para;</a></h3>
+<p>Check your assignment for the requirements at the beginning of the page. Make sure everything is correct.</p>
+<details class="success" open="open">
+<summary>Success</summary>
+<p><strong>Requirements</strong></p>
+<p>To ensure the successful completion of the assignment, please make sure the following requirements are met:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The source branch name for the Merge Request is <code>assignment</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>data/</code> directory in GitLab only contains a <code>.gitignore</code> file  (files added here are <strong>NOT</strong> tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>models/</code> directory in GitLab has an empty <code>.gitignore</code> file (files added here are tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>reports/</code> directory in GitLab has an empty <code>.gitignore</code> (files added here are tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The <code>notebooks/</code> directory in GitLab only contains a <code>.gitignore</code> (files added here are <strong>NOT</strong> tracked by Git)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The root of your repository contains an empty <code>config.yaml</code> file.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>(optional)</strong> The README.md file has been updated to provide an overview of the repository, including details about its purpose, structure, and usage instructions.</li>
+</ul>
+</details>
+<h3 id="12-submission-create-a-merge-request-to-the-main-branch"><strong>12. Submission: Create a Merge Request to the <code>main</code> Branch</strong><a class="headerlink" href="#12-submission-create-a-merge-request-to-the-main-branch" title="Permanent link">&para;</a></h3>
+<p>Once you have completed all the tasks and are ready to submit your assignment, follow the steps below to create a Merge Request to the <strong><code>main</code></strong> branch:</p>
+<ol>
+<li>Go to the GitLab repository page.</li>
+<li>Click on the "Merge Requests" tab.</li>
+<li>Click on the "New Merge Request" button.</li>
+<li>Set the source branch to <code>assignment</code> and the target branch to <code>main</code>.</li>
+<li>Provide a title and description for your Merge Request.</li>
+<li>Review the changes and make sure everything looks correct.</li>
+<li>Click on the "Submit Merge Request" button.</li>
+</ol>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<div class="language-text highlight"><pre><span></span><code>Please DO NOT MERGE your request until you receive a submission report attached to your 
+Merge Request.
+
+- Creating a merge request will trigger a CI pipeline that automatically checks our work.
+- A test report will be generated and added to your merge request.
+- This report will contain the results of the automated tests and checks on your assignment.
+- After passing all tests, you may proceed with merging the updates into the `main` branch.
+</code></pre></div>
+</details>
+<p>Submission report looks like this</p>
+<p><img alt="Untitled" src="../images/submission_report.png" /></p>
+<h2 id="pro-tips"><strong>Pro Tips</strong><a class="headerlink" href="#pro-tips" title="Permanent link">&para;</a></h2>
+<h3 id="1-use-and-share-the-template"><strong>1. Use and share the template</strong><a class="headerlink" href="#1-use-and-share-the-template" title="Permanent link">&para;</a></h3>
+<p>Congratulations on completing the assignment! You have successfully created a Git Repo Template that can be used for new projects. Simply fork or clone the template, rename it, and start using it in your future project</p>
+<h3 id="2-use-vscode-ide-to-generate-gitignore-files"><strong>2. Use VSCode IDE to generate <code>.gitignore</code> files</strong><a class="headerlink" href="#2-use-vscode-ide-to-generate-gitignore-files" title="Permanent link">&para;</a></h3>
+<p>VSCode IDE provides a handy option to generate  <code>.gitignore</code> file for Python language: </p>
+<ul>
+<li>press <code>CTRL + Shift + P</code> (<code>CMD + Shift + P</code> on macOS) to open the command palette.</li>
+<li>type in <code>Add gitignore</code> in the command palette.</li>
+<li>Update code &amp; commit</li>
+</ul>
+<p><img alt="Untitled" src="../../project/images/footer.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Machine Learning REPA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/mlrepa" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/mlrepa" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/groups/9320089/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "toc.follow"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      
+        
+          <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        
+      
+        
+          <script src="../../js/tablesort.js"></script>
+        
+      
+    
+  </body>
+</html>
